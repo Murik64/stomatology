@@ -1,0 +1,6 @@
+<svg width="103" height="39" viewBox="0 0 103 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="64.5" y="0.5" width="38" height="38" rx="19" stroke="#202020"/>
+<path d="M75 19.5H92.5M92.5 19.5L85 12M92.5 19.5L85 27" stroke="#202020" stroke-linecap="round"/>
+<rect x="38.5" y="38.5" width="38" height="38" rx="19" transform="rotate(-180 38.5 38.5)" stroke="#202020"/>
+<path d="M28 19.5L10.5 19.5M10.5 19.5L18 27M10.5 19.5L18 12" stroke="#202020" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,344 @@
+/* ============================================
+   PREVENTIVE MEDICINE — PRINCIPLES (Section 4)
+   «Принципы работы центра»
+   Figma node: 1634:4140 (1440×575)
+   Section bg: #FFFFFF, cards bg: #167585
+   ============================================ */
+
+/* .preventive-page prefix for specificity override
+   against .preventive-main > section (0,1,1) */
+.preventive-page .preventive-principles {
+    background: var(--color-bg-white);
+    padding: 70px 0;
+}
+
+/* ---- Header ----
+   Figma: centered, 30px gap to cards */
+.preventive-principles__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ---- Title ----
+   Figma 1634:4142: Forum 52px, lh 46.8px (90%), ls -1.04px
+   Color: #202020, bbox 585×47 */
+.preventive-principles__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* ---- Arrows (mobile only) ---- */
+.preventive-principles__arrows {
+    display: none;
+}
+
+
+
+/* ---- Grid ----
+   Figma: 3 cols × 2 rows, gap 20px, card width 440px */
+.preventive-principles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ---- Card ----
+   Figma 1634:4144: 440×160/178, bg #167585
+   Stroke: 1px solid rgba(255,255,255,0.2) outside
+   Padding: 20px (all sides by coordinate analysis) */
+.preventive-principles__card {
+    background: #167585;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+}
+
+/* ---- Card title ----
+   Figma 1634:4145: Forum 24px, lh 21.6px (90%), ls -0.48px
+   Color: #FFFFFF (full white)
+   Separator line below: border-bottom rgba(255,255,255,0.2)
+   Space: 20px below text to line, 40px from line to description */
+.preventive-principles__card-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+/* ---- Card description ----
+   Figma 1634:4146: Open Sans 14px, lh 18.2px (130%), ls -0.28px
+   Color: rgba(255,255,255,0.8) */
+.preventive-principles__card-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE — LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .preventive-page .preventive-principles {
+        padding: 88px 0;
+    }
+
+    .preventive-principles__title {
+        font-size: 58px;
+    }
+
+    .preventive-principles__header {
+        margin-bottom: 36px;
+    }
+
+    .preventive-principles__grid {
+        max-width: 1840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 26px;
+    }
+
+    .preventive-principles__card-text {
+        font-size: 15px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — DESKTOP (до 1400px)
+   ============================================ */
+@media (max-width: 1400px) {
+    .preventive-page .preventive-principles {
+        padding: 60px 0;
+    }
+
+    .preventive-principles__title {
+        font-size: 46px;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 22px;
+    }
+
+    .preventive-principles__card-text {
+        font-size: 13px;
+    }
+
+    .preventive-principles__grid {
+        gap: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MEDIUM DESKTOP (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .preventive-page .preventive-principles {
+        padding: 56px 0;
+    }
+
+    .preventive-principles__title {
+        font-size: 40px;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 20px;
+    }
+
+    .preventive-principles__card {
+        padding: 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (до 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .preventive-page .preventive-principles {
+        padding: 50px 0;
+    }
+
+    .preventive-principles__title {
+        font-size: 36px;
+    }
+
+    .preventive-principles__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   Figma 1810:268 — 320×347
+   Horizontal scroll carousel, arrows, updated typo
+   ============================================ */
+@media (max-width: 768px) {
+    .preventive-page .preventive-principles {
+        padding: 39px 0 24px;
+    }
+
+    .preventive-page .preventive-principles > .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .preventive-principles__header {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .preventive-principles__title {
+        font-size: 28px;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+
+    /* Arrows — Figma: 32×32, stroke #202020, radius 50, gap 10px */
+    .preventive-principles__arrows {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .preventive-principles__arrow {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid var(--color-text);
+        background: transparent;
+        color: var(--color-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.2s, color 0.2s;
+        flex-shrink: 0;
+    }
+
+    .preventive-principles__arrow::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 12px;
+        background-color: currentColor;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+    }
+
+    .preventive-principles__arrow[data-dir="prev"]::after {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M18.207 8L0.707 8M0.707 8L8.207 15.5M0.707 8L8.207 0.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M18.207 8L0.707 8M0.707 8L8.207 15.5M0.707 8L8.207 0.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    .preventive-principles__arrow[data-dir="next"]::after {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M0.5 8H18M18 8L10.5 0.5M18 8L10.5 15.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M0.5 8H18M18 8L10.5 0.5M18 8L10.5 15.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    .preventive-principles__arrow:hover {
+        background: rgba(32, 32, 32, 0.12);
+    }
+
+    /* Grid → horizontal scroll carousel */
+    .preventive-principles__grid {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+    }
+
+    .preventive-principles__grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .preventive-principles__card {
+        min-width: 250px;
+        max-width: 250px;
+        height: 160px;
+        padding: 15px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 20px;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+    }
+
+    .preventive-principles__card-text {
+        font-size: 10px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE (до 576px)
+   ============================================ */
+@media (max-width: 576px) {
+    .preventive-page .preventive-principles {
+        padding: 45px 0;
+    }
+
+    .preventive-principles__card {
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — EXTRA SMALL (до 374px)
+   ============================================ */
+@media (max-width: 374px) {
+    .preventive-page .preventive-principles {
+        padding: 40px 0;
+    }
+
+    .preventive-principles__title {
+        font-size: 26px;
+    }
+
+    .preventive-principles__card {
+        min-width: 230px;
+        max-width: 230px;
+        height: 150px;
+        padding: 12px;
+    }
+
+    .preventive-principles__card-title {
+        font-size: 18px;
+    }
+
+    .preventive-principles__card-text {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,737 @@
+/* ============================================
+   FOOTER - Подвал сайта
+   ============================================ */
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.footer {
+    background: var(--color-primary);
+    padding: 50px 0 50px;
+    color: var(--color-white);
+}
+
+/* Footer top section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.footer-top-left {
+    display: flex;
+    flex-direction: column;
+    gap: 365px;
+}
+
+.footer-logo {
+    margin-bottom: 0;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.btn-back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+}
+
+.btn-back-to-top svg {
+    width: 7px;
+    height: 13px;
+}
+
+/* Mobile back to top button hidden on desktop */
+.btn-back-to-top-mobile {
+    display: none;
+}
+
+.footer-buttons-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+/* Footer buttons */
+.btn-footer-glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 12px;
+    padding: 7px 15px;
+    backdrop-filter: blur(20px);
+}
+
+.btn-footer-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+}
+
+.btn-footer-outline {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 12px;
+    padding: 7px 15px;
+    backdrop-filter: blur(20px);
+}
+
+.btn-footer-outline:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--color-white);
+}
+
+.btn-personal-cabinet {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+}
+
+/* Личный кабинет (desktop) — прижат к низу блока */
+.btn-personal-cabinet-desktop {
+    margin-top: 280px;
+}
+
+/* Desktop: скрываем нижний блок кнопок (mobile only) */
+.footer-buttons-bottom {
+    display: none;
+}
+
+/* Footer navigation */
+.footer-nav {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-top: -440px;
+    margin-left: 270px;
+    margin-right: 200px;
+}
+
+.footer-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px 40px;
+}
+
+/* Desktop grid layout */
+.footer-nav-uslugi {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.footer-nav-vrachi {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.footer-nav-programmy {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.footer-nav-novosti {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.footer-nav-info {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.footer-nav-kontakty {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.footer-nav-social {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.footer-nav-block {
+    margin-bottom: 0;
+}
+
+.footer-nav-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    line-height: 1.3;
+    color: #A8A8A8;
+    text-transform: capitalize;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+}
+
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-list li {
+    margin-bottom: 0;
+}
+
+.footer-nav-list a {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 2;
+    color: var(--color-white);
+}
+
+.footer-nav-list a:hover {
+    color: var(--color-text-white-muted);
+}
+
+.footer-contacts a {
+    font-family: var(--font-ui);
+}
+
+/* Footer divider */
+.footer-divider {
+    height: 1px;
+    background: var(--color-border-white);
+    margin-bottom: 20px;
+}
+
+/* Footer locations */
+.footer-locations {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.footer-locations-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.footer-location {
+    margin-bottom: 0;
+}
+
+.location-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    line-height: 1.1;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+    min-height: 36px;
+}
+
+.location-hours {
+    font-family: var(--font-body);
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.location-metro {
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+ 
+
+.metro-red::before {
+    background: var(--color-accent-orange);
+}
+
+.metro-blue::before {
+    background: var(--color-accent-blue);
+}
+
+.location-address {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--color-white);
+    margin-bottom: 0;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    padding-top: 0;
+}
+
+.footer-bottom .footer-divider {
+    margin-bottom: 20px;
+}
+
+.footer-copyright,
+.footer-license {
+    font-size: 10px;
+    line-height: 1.1;
+    color: #A8A8A8;
+    letter-spacing: -0.02em;
+}
+
+.text-muted-footer{
+    color: #A8A8A8;
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .footer > .container-fluid {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .footer-top-left {
+        gap: 370px;
+    }
+    .btn-personal-cabinet-desktop {
+        margin-top: 285px;
+    }
+    
+
+    .footer-nav {
+        margin-top: -445px;
+    }
+    
+}
+
+@media screen and (max-width: 1400px) {
+    .footer-top-left {
+        gap: 375px;
+    }
+
+    .btn-personal-cabinet-desktop {
+        margin-top: 290px;
+    }
+
+    
+    .footer-nav {
+        margin-top: -450px;
+    }
+    
+    
+}
+
+/* ============================================
+   RESPONSIVE - 1200px
+   ============================================ */
+@media (max-width: 1200px) {
+    .footer-nav {
+        margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-top-left {
+        gap: 250px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-top-left {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .footer-buttons-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-buttons-right .btn {
+        flex: 0 0 auto;
+    }
+
+    .footer-nav {
+        margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+
+    /* Tablet grid layout */
+    .footer-nav-uslugi {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-nav-programmy {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-nav-vrachi {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-nav-novosti {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer-nav-info {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .footer-nav-kontakty {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .footer-nav-social {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer-top-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-nav-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-nav {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 0 20px;
+    }
+
+    .footer-top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px 0;
+        margin-bottom: 30px;
+        align-items: start;
+    }
+
+    /* Логотип слева вверху */
+    .footer-top-left {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: auto;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer-logo img {
+        height: 30px;
+        width: auto;
+    }
+
+    /* Кнопка "Наверх" скрыта в левом блоке на мобильном */
+    .footer-top-left .btn-back-to-top-desktop {
+        display: none;
+    }
+
+    /* Группа кнопок справа от логотипа */
+    .footer-buttons-right {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        width: auto;
+        justify-self: end;
+    }
+
+    /* Стили кнопок */
+    .footer-buttons-right .btn {
+        width: auto;
+        justify-content: center;
+        font-size: 8px;
+        padding: 5px 12px;
+        line-height: 1.3;
+        border-radius: 0;
+        gap: 3px;
+    }
+
+    .footer-buttons-right .btn svg {
+        width: auto;
+        height: 8px;
+    }
+
+    /* Скрываем desktop-версию кнопки Личный кабинет */
+    .btn-personal-cabinet-desktop {
+        display: none !important;
+    }
+
+    /* Нижний ряд кнопок: Наверх слева, Личный кабинет справа */
+    .footer-buttons-bottom {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .footer-buttons-bottom .btn {
+        font-size: 8px;
+        padding: 5px 12px;
+        line-height: 1.3;
+        border-radius: 0;
+        gap: 5px;
+    }
+
+    .footer-buttons-bottom .btn svg {
+        width: auto;
+        height: 7px;
+    }
+
+    /* Показываем мобильную кнопку "Наверх" */
+    .footer-buttons-bottom .btn-back-to-top-mobile {
+        display: inline-flex !important;
+    }
+
+    .footer-nav {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-nav-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px 30px;
+    }
+
+    /* Порядок блоков по дизайну Figma для мобильного: 
+       Левая: Услуги, Врачи, Новости, Контакты, Соц сети
+       Правая: Программы, Инфо */
+    .footer-nav-uslugi {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-nav-programmy {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-nav-vrachi {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer-nav-info {
+        grid-column: 2;
+        grid-row: 2 / 6;
+    }
+
+    .footer-nav-novosti {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .footer-nav-kontakty {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .footer-nav-social {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .footer-nav-title {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+        color: #A8A8A8;
+        text-transform: capitalize;
+    }
+
+    .footer-nav-list a {
+        font-family: var(--font-body);
+        font-size: 8px;
+        line-height: 2em;
+    }
+
+    .footer-contacts a {
+        font-family: var(--font-ui);
+        font-size: 8px;
+        line-height: 2em;
+    }
+
+    /* Соц сети - без capitalize */
+    .footer-nav-social .footer-nav-title {
+        text-transform: none;
+    }
+
+    .footer-divider {
+        margin-bottom: 15px;
+    }
+
+    .footer-locations {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-locations-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 30px;
+    }
+
+    .location-title {
+        font-family: var(--font-heading);
+        font-size: 12px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        min-height: auto;
+        margin-bottom: 12px;
+    }
+
+    .location-hours {
+        font-family: var(--font-body);
+        font-size: 8px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .location-metro {
+        font-size: 8px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        gap: 3px;
+    }
+
+    .location-address {
+        font-family: var(--font-ui);
+        font-size: 8px;
+        line-height: 1.3;
+    }
+
+    .footer-bottom {
+        padding-top: 0;
+    }
+
+    .footer-bottom .footer-divider {
+        margin-bottom: 12px;
+    }
+
+    .footer-bottom .d-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .footer-copyright,
+    .footer-license {
+        font-family: var(--font-body);
+        font-size: 8px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: #A8A8A8;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE SMALL (до 375px)
+   ============================================ */
+@media (max-width: 375px) {
+    .footer-buttons-right {
+        gap: 4px 6px;
+    }
+
+    .footer-buttons-right .btn {
+        font-size: 7px;
+        padding: 4px 10px;
+    }
+
+    .footer-nav-grid {
+        gap: 15px 20px;
+    }
+
+    .footer-locations-grid {
+        gap: 15px 20px;
+    }
+
+    .text-muted-footer{
+        color: #A8A8A8;
+        font-size: 6px;
+    }
+}

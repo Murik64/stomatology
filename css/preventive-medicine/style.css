@@ -1,0 +1,276 @@
+/* ============================================
+   ПРЕВЕНТИВНАЯ МЕДИЦИНА - MAIN STYLES
+   ============================================ */
+
+@import url('../base.css');
+@import url('../components.css');
+@import url('../header.css');
+@import url('../footer.css');
+@import url('section-hero.css');
+@import url('section-feature.css');
+@import url('section-banner.css');
+@import url('section-principles.css');
+@import url('section-programs.css');
+@import url('section-symptoms.css');
+@import url('section-doctors.css');
+@import url('section-journey.css');
+@import url('section-pre-visit.css');
+@import url('../section-reviews.css');
+@import url('section-reviews.css');
+@import url('../section-clinics.css');
+
+.preventive-page {
+    background: var(--color-bg-cream);
+    color: var(--color-text);
+    --preventive-section-space: clamp(54px, 5.4vw, 88px);
+    --preventive-heading-size: clamp(30px, 3.7vw, 52px);
+    --preventive-subtitle-size: clamp(14px, 1.25vw, 18px);
+}
+
+.preventive-main > section {
+    padding: var(--preventive-section-space) 0;
+}
+
+.preventive-section--white {
+    background: var(--color-bg-white);
+}
+
+.preventive-section--cream {
+    background: var(--color-bg-cream);
+}
+
+.preventive-main .section-title {
+    font-size: var(--preventive-heading-size);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+}
+
+.preventive-main .section-subtitle {
+    font-size: var(--preventive-subtitle-size);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--color-text-muted);
+}
+
+.preventive-section-head {
+    margin-bottom: clamp(24px, 2.8vw, 40px);
+}
+
+.preventive-section-head--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.preventive-section-head--narrow {
+    max-width: min(100%, 585px);
+}
+
+.preventive-section-head--feature {
+    max-width: min(100%, 780px);
+}
+
+.preventive-section-head--programs,
+.preventive-section-head--wide {
+    max-width: min(100%, 840px);
+}
+
+.preventive-section-head--journey {
+    max-width: min(100%, 820px);
+}
+
+.preventive-section-head--review {
+    max-width: min(100%, 620px);
+}
+
+.preventive-section-head--clinics {
+    max-width: min(100%, 654px);
+}
+
+.preventive-section-action {
+    gap: 12px;
+    margin-top: clamp(30px, 3.8vw, 42px);
+}
+
+.preventive-breadcrumbs {
+    gap: 8px;
+    margin-bottom: clamp(30px, 3.8vw, 56px);
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--color-text-light);
+}
+
+.preventive-breadcrumbs a {
+    color: inherit;
+}
+
+.preventive-breadcrumbs a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.preventive-breadcrumbs__current {
+    color: var(--color-text);
+}
+
+.preventive-brand-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.preventive-brand-mark--light {
+    color: var(--color-white);
+}
+
+.preventive-brand-mark__logo {
+    width: clamp(158px, 18vw, 262px);
+    height: auto;
+}
+
+.preventive-brand-mark__label {
+    font-family: var(--font-body);
+    font-size: clamp(9px, 0.8vw, 11px);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: currentColor;
+    opacity: 0.75;
+}
+
+.preventive-brand-mark--banner {
+    align-items: center;
+}
+
+.preventive-brand-mark--banner .preventive-brand-mark__logo {
+    width: clamp(128px, 12vw, 176px);
+}
+
+.preventive-copy-block {
+    min-width: 0;
+}
+
+.preventive-copy-block__text {
+    display: grid;
+    gap: clamp(14px, 1.6vw, 24px);
+    max-width: 790px;
+    font-size: var(--preventive-subtitle-size);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--color-text-muted);
+}
+
+.preventive-copy-block__text p {
+    margin: 0;
+}
+
+.preventive-copy-block__actions {
+    gap: 15px;
+    margin-top: clamp(28px, 3.8vw, 44px);
+}
+
+.preventive-copy-block--intro .preventive-copy-block__actions {
+    margin-top: auto;
+    padding-top: clamp(56px, 7vw, 118px);
+}
+
+.preventive-media-panel {
+    overflow: hidden;
+    background: var(--color-bg-light);
+}
+
+.preventive-media-panel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preventive-media-panel--intro {
+    height: auto;
+}
+
+.preventive-media-panel--intro img {
+    aspect-ratio: 420 / 168;
+    object-position: center;
+}
+
+.preventive-media-panel--feature img {
+    aspect-ratio: 440 / 404;
+}
+
+.menu-level-2 {
+    height: 35px;
+}
+
+
+@media (max-width: 1199.98px) {
+    .preventive-media-panel--intro img {
+        aspect-ratio: 440 / 404;
+    }
+
+    .preventive-copy-block--intro .preventive-copy-block__actions {
+        margin-top: clamp(24px, 3vw, 40px);
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .preventive-main > section {
+        padding: clamp(46px, 6vw, 64px) 0;
+    }
+
+    .preventive-section-head--feature,
+    .preventive-section-head--clinics {
+        max-width: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .preventive-main .section-title {
+        line-height: 1;
+    }
+
+    .preventive-main .section-subtitle {
+        margin-top: 16px;
+    }
+
+    .preventive-breadcrumbs {
+        margin-bottom: 24px;
+        font-size: 12px;
+    }
+
+    .preventive-copy-block__text {
+        font-size: 14px;
+    }
+
+    .preventive-copy-block__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .preventive-copy-block__actions .btn {
+        width: auto;
+        font-size: 12px;
+        line-height: 1.3;
+        padding: 8px 20px;
+    }
+
+    .preventive-copy-block__actions .btn .btn-arrow {
+        font-size: 11px;
+    }
+
+    .preventive-media-panel--intro img {
+        aspect-ratio: 3 / 2;
+    }
+
+    .preventive-brand-mark__logo {
+        width: 160px;
+    }
+
+    .mobile-breadcrumbs{
+        
+    }
+}

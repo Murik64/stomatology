@@ -1,0 +1,53 @@
+/* ============================================
+   НЕМЕЦКАЯ СЕМЕЙНАЯ КЛИНИКА - MAIN STYLES
+   Главный файл стилей - импорты всех секций
+   ============================================ */
+
+/* ============================================
+   БАЗОВЫЕ СТИЛИ
+   ============================================ */
+@import url('base.css');
+@import url('components.css');
+
+/* ============================================
+   ШАПКА И ПОДВАЛ
+   ============================================ */
+@import url('header.css');
+@import url('footer.css');
+
+/* ============================================
+   СЕКЦИИ СТРАНИЦЫ
+   ============================================ */
+
+/* Section 1 - Hero слайдер */
+@import url('section-hero.css');
+
+/* Section 2 - Все направления медицинской помощи */
+@import url('section-directions.css');
+
+/* Section 3 - Немецкий стандарт медицины */
+@import url('section-standards.css');
+
+/* Section 4 - Центры компетенций */
+@import url('section-competence.css');
+
+/* Section 5 - Поиск врача */
+@import url('section-search.css');
+
+/* Section 6 - Команда врачей */
+@import url('section-doctors.css');
+
+/* Section 7 - Медицинские программы */
+@import url('section-programs.css');
+
+/* Section 8 - Актуальные предложения */
+@import url('section-offers.css');
+
+/* Section 9 - Новости */
+@import url('section-news.css');
+
+/* Section 10 - Отзывы пациентов */
+@import url('section-reviews.css');
+
+/* Section 11 - Наши клиники */
+@import url('section-clinics.css');

@@ -1,0 +1,135 @@
+/* ============================================
+   PREVENTIVE MEDICINE — REVIEWS OVERRIDES
+   «Отзывы пациентов» (preventive-specific)
+   Figma node: 1634:4433 (1440×671)
+   Overrides for shared section-reviews.css
+   ============================================ */
+
+/* ---- Doctor name: Open Sans instead of Forum ----
+   Figma: Open Sans 20px, lh 26px, ls -0.4px */
+.preventive-reviews .review-doctor {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* ---- Review footer: author + read more link ---- */
+.review-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.review-footer .review-author {
+    margin-top: 0;
+}
+
+/* ---- "Читать полностью →" link ---- */
+.review-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.25s ease;
+}
+
+.review-more:hover {
+    opacity: 0.7;
+}
+
+.review-more-arrow {
+    font-family: var(--font-ui, 'Inter', sans-serif);
+    font-size: 11px;
+    line-height: 1;
+}
+
+.preventive-reviews .slider-arrows {
+    gap: 25px;
+}
+
+.preventive-reviews .slider-arrows .arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text);
+    padding: 0;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.preventive-reviews .slider-arrows .arrow-btn:hover {
+    background: rgba(32, 32, 32, 0.12);
+}
+
+.preventive-reviews .slider-arrows .arrow-btn::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 15px;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.preventive-reviews .slider-arrows .arrow-prev::after {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M18.207 8L0.707 8M0.707 8L8.207 15.5M0.707 8L8.207 0.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M18.207 8L0.707 8M0.707 8L8.207 15.5M0.707 8L8.207 0.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.preventive-reviews .slider-arrows .arrow-next::after {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M0.5 8H18M18 8L10.5 0.5M18 8L10.5 15.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 16' fill='none'%3E%3Cpath d='M0.5 8H18M18 8L10.5 0.5M18 8L10.5 15.5' stroke='%23000' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.preventive-reviews .slider-arrows .arrow-btn i {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .preventive-reviews .review-doctor {
+        font-size: 16px;
+    }
+
+    .review-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .review-more {
+        font-size: 11px;
+    }
+
+    .preventive-reviews .slider-arrows {
+        gap: 10px;
+    }
+
+    .preventive-reviews .slider-arrows .arrow-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .preventive-reviews .slider-arrows .arrow-btn::after {
+        width: 14px;
+        height: 12px;
+    }
+}

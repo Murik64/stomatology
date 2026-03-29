@@ -1,0 +1,94 @@
+.accordion{
+  padding-top: 0px;
+}
+.accordions-container {
+  display: flex;
+  gap: 20px; /* Отступ между блоками. Подгони под макет, если нужно */
+  width: 100%;
+}
+
+.accordion-item {
+  flex: 1;
+  /* Принудительно задаем только верхнюю и нижнюю линии */
+  border-top: 1px solid #d1d1d1 !important;
+  border-bottom: 1px solid #d1d1d1 !important;
+
+  /* Жестко убиваем боковые рамки и скругления, которые ломают вид */
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+
+  padding: 20px 0; /* Отступы от линий до текста */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Делаем элемент кликабельным визуально */
+}
+
+.accordion-title {
+  font-size: 16px;
+  color: #333333;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  color: #888888; /* На макете плюс выглядит чуть светлее/тоньше */
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ============================================
+   ACCORDION RESPONSIVE
+   ============================================ */
+
+/* Для больших экранов базовые стили уже написаны, max-width: 1000px держит сетку */
+
+@media (max-width: 992px) {
+  .accordions-container {
+    gap: 12px; /* Уменьшаем расстояние между колонками */
+    padding: 0 16px; /* Задаем безопасные отступы по бокам, чтобы контент не прилипал к краям экрана */
+  }
+
+  .accordion-title {
+    font-size: 15px; /* Слегка уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 768px) {
+  .accordions-container {
+    flex-direction: column; /* Ломаем горизонтальную строку, ставим блоки друг под друга */
+    gap: 8px; /* Убираем отступ, элементы пойдут сплошным списком */
+  }
+
+  .accordion-item {
+    /* Убираем нижнюю рамку у всех элементов, кроме последнего, чтобы избежать двойной линии в 2px на стыке */
+    border-bottom: none !important;
+    padding: 16px 0; /* Делаем отступы чуть компактнее для мобилок */
+  }
+
+  .accordion-item:last-child {
+    border-bottom: 1px solid #d1d1d1 !important; /* Оставляем границу только самому последнему элементу */
+  }
+
+  .accordion-title {
+    font-size: 16px; /* На мобилках иногда лучше вернуть читабельный размер для тапов */
+  }
+
+  .accordion-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 374px) {
+  .accordion-item {
+    padding: 12px 0; /* Для совсем узких экранов (старые iPhone) ужимаем отступы еще сильнее */
+  }
+
+  .accordion-title {
+    font-size: 14px;
+  }
+}

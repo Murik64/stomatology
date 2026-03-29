@@ -1,0 +1,114 @@
+/* ============================================
+   ЭКСПЕРТНАЯ ОФТАЛЬМОЛОГИЯ - MAIN STYLES
+   Namespace: ophthalmology-*
+   Цвет акцента: #2E57CB (синий, как в header)
+   ============================================ */
+
+@import url('../base.css');
+@import url('../components.css');
+@import url('../header.css');
+@import url('../footer.css');
+@import url('section-hero.css');
+@import url('section-feature.css');
+@import url('section-directions.css');
+@import url('section-banner.css');
+@import url('section-benefits.css');
+@import url('section-symptoms.css');
+@import url('../section-offers.css');
+@import url('section-doctors.css');
+@import url('section-journey.css');
+@import url('section-pre-visit.css');
+@import url('../section-reviews.css');
+@import url('section-reviews.css');
+@import url('section-technologies.css');
+@import url('../section-clinics.css');
+@import url('section-cta.css');
+
+.ophthalmology-page {
+    background: var(--color-bg-cream);
+    color: var(--color-text);
+    --ophthalmology-section-space: clamp(54px, 5.4vw, 88px);
+    --ophthalmology-heading-size: clamp(30px, 3.7vw, 52px);
+    --ophthalmology-subtitle-size: clamp(14px, 1.25vw, 18px);
+    --ophthalmology-accent: #2E57CB;
+}
+
+.ophthalmology-main > section {
+    padding: var(--ophthalmology-section-space) 0;
+}
+
+.ophthalmology-main .section-title {
+    font-size: var(--ophthalmology-heading-size);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+}
+
+.ophthalmology-main .section-subtitle {
+    font-size: var(--ophthalmology-subtitle-size);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--color-text-muted);
+}
+
+.ophthalmology-breadcrumbs {
+    gap: 8px;
+    margin-bottom: clamp(30px, 3.8vw, 56px);
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--color-text-light);
+}
+
+.ophthalmology-breadcrumbs a {
+    color: inherit;
+}
+
+.ophthalmology-breadcrumbs a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ophthalmology-breadcrumbs__current {
+    color: var(--color-text);
+}
+
+/* Offers section — ophthalmology gradient (#2E57CB) and fallback */
+.ophthalmology-page .offer-image {
+    background-color: #ECECEC;
+}
+
+.ophthalmology-page .offer-image::before {
+    background: linear-gradient(178deg, rgba(46, 87, 203, 0) 31%, rgba(46, 87, 203, 1) 97%);
+}
+
+.ophthalmology-page .offer-image::after {
+    background: linear-gradient(178deg, rgba(46, 87, 203, 0) 31%, rgba(46, 87, 203, 1) 97%);
+}
+
+@media (max-width: 768px) {
+    .ophthalmology-page .offer-image::before,
+    .ophthalmology-page .offer-image::after {
+        background: linear-gradient(178deg, rgba(46, 87, 203, 0) 31%, rgba(46, 87, 203, 1) 97%);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .ophthalmology-main > section {
+        padding: clamp(46px, 6vw, 64px) 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .ophthalmology-main .section-title {
+        line-height: 1;
+    }
+
+    .ophthalmology-main .section-subtitle {
+        margin-top: 16px;
+    }
+
+    .ophthalmology-breadcrumbs {
+        margin-bottom: 24px;
+        font-size: 12px;
+    }
+}

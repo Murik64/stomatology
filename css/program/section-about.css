@@ -1,0 +1,181 @@
+/* ============================================
+   PROGRAM PAGE — О ПРОГРАММЕ (Section 2)
+   Figma node: 1467:2942 (1440×376)
+   BG: #ffffff
+   Layout: Bootstrap row > col-lg-5 + col-lg-7
+   ============================================ */
+
+.program-about {
+    background: var(--color-bg-white);
+    padding: 40px 0 75px;
+}
+
+/* ---- Breadcrumbs ---- */
+.program-about__breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 33px;
+}
+
+.program-about__breadcrumbs a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.25s ease;
+}
+
+.program-about__breadcrumbs a:hover {
+    opacity: 0.8;
+}
+
+.program-about__breadcrumbs > span:not(.program-about__breadcrumbs-current) {
+    opacity: 0.4;
+}
+
+.program-about__breadcrumbs-current {
+    opacity: 0.8;
+}
+
+/* ---- Title ---- */
+.program-about__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* ---- Description ---- */
+.program-about__description {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE — LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .program-about {
+        padding: 50px 0 90px;
+    }
+
+    .program-about__title {
+        font-size: 58px;
+    }
+
+    .program-about__description {
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MEDIUM DESKTOP (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .program-about__title {
+        font-size: 44px;
+    }
+
+    .program-about__description {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (до 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .program-about {
+        padding: 40px 0 50px;
+    }
+
+    .program-about__title {
+        font-size: 36px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   Figma node: 1810:1477 (320×432)
+   Single column, no breadcrumbs
+   Order: title → descriptions → CTA button
+   ============================================ */
+@media (max-width: 768px) {
+    .program-about {
+        padding: 50px 0 43px;
+    }
+
+    .program-about__breadcrumbs {
+        display: none;
+    }
+
+    /* Remove row gutters so display:contents children
+       align flush with the container padding */
+    .program-about .row {
+        --bs-gutter-x: 0;
+    }
+
+    /* Dissolve both column wrappers — all children
+       become direct flex items of .row for reordering */
+    .program-about .row > [class*="col-lg"] {
+        display: contents;
+    }
+
+    .program-about__title {
+        font-size: 28px;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        order: 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .program-about__description {
+        font-size: 14px;
+        line-height: 1.35;
+        opacity: 0.9;
+        order: 1;
+        width: 100%;
+    }
+
+    /* Figma: 20px gap from last description to button */
+    .program-about__cta {
+        order: 3;
+        width: 100%;
+        padding-top: 0 !important;
+        margin-top: 20px !important;
+    }
+
+    .program-about__cta .btn, .program-doctors__action .btn {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+
+    .program-about__cta .btn-arrow, .program-doctors__action .btn-arrow {
+        font-size: 11px;
+    }
+
+
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE (до 576px)
+   ============================================ */
+@media (max-width: 576px) {
+    .program-about__title {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,1365 @@
+/* ============================================
+   SECTION HERO - Главный слайдер
+   ============================================ */
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.hero-section {
+    position: relative;
+    min-height: clamp(580px, 48vw, 860px);
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1C2472 0%, #2E3A96 50%, #3D4DB8 100%);
+}
+
+/* Hero Background */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-bg.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Градиент слева */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.95) 30%,
+        rgba(28, 36, 114, 0.7) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Градиент снизу */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.9) 30%,
+        rgba(28, 36, 114, 0.5) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: relative;
+    height: 100%;
+    min-height: clamp(580px, 48vw, 860px);
+    z-index: 10;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: clamp(580px, 48vw, 860px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.hero-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Awards - верхний левый угол (Desktop) */
+.hero-awards-desktop {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 20;
+}
+
+.hero-awards-mobile {
+    display: none;
+}
+
+.award-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: clamp(5px, 1vw, 5px) clamp(5px, 0.9vw, 8px);
+    width: clamp(160px, 13vw, 210px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.award-badge {
+    margin-bottom: 10px;
+}
+
+.award-badge img {
+    height: 24px;
+    width: auto;
+}
+
+.award-text {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-text-white-muted);
+    letter-spacing: -0.02em;
+}
+
+.award-text strong {
+    display: block;
+    color: var(--color-white);
+    margin-bottom: 2px;
+}
+
+.award-text span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Hero Columns */
+.hero-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+}
+
+.hero-col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hero Title */
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.hero-title.hero-title-v2{
+    margin-top: 60px;
+}
+
+.hero-asterisk {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+/* Hero Info (Features + Buttons) */
+.hero-info {
+    max-width: 100%;
+}
+
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-features li {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+    position: relative;
+    padding-left: 14px;
+}
+
+.hero-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-white);
+    font-size: 8px;
+    line-height: 2.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-buttons .btn {
+    padding: 14px 24px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+/* Hero Nav (Arrows) */
+.hero-nav {
+    margin-top: auto;
+}
+
+/* Hero Nav Desktop - показывать только на десктопе */
+.hero-nav-desktop {
+    display: block;
+}
+
+/* Hero Nav Mobile - скрыть на десктопе */
+.hero-nav-mobile {
+    display: none;
+}
+
+.hero-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.arrow-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hero Note */
+.hero-note {
+    font-family: var(--font-body);
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: -0.01em;
+    margin: 0;
+    margin-top: auto;
+}
+
+/* Hero Image Mobile */
+.hero-image-mobile {
+    display: none;
+}
+
+@media (min-width: 1920px) {
+    .hero-awards-desktop {
+        top: 40px;
+        left: calc((100vw - 1920px) / 2 + 40px);
+    }
+
+    .hero-content {
+        left: calc((100vw - 1920px) / 2 + 40px);
+        right: calc((100vw - 1920px) / 2 + 40px);
+    }
+
+    .hero-title.hero-title-v2{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1920px) {
+    .hero-title.hero-title-v2{
+        margin-top: 60px;
+    }
+}
+
+
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .hero-features li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: auto;
+        background: linear-gradient(180deg, #1C2472 0%, #2E3A96 50%, #3D4DB8 100%);
+    }
+
+    .hero-bg {
+        background-image: none;
+        /* background: linear-gradient(180deg, #1C2472 0%, #2E3A96 50%, #3D4DB8 100%); */
+        background: #1C2472;
+    }
+
+    .hero-bg::before,
+    .hero-bg::after {
+        display: none;
+    }
+
+    .hero-slider {
+        min-height: auto;
+    }
+
+    .hero-slide {
+        position: relative;
+        min-height: auto;
+        padding: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-slide:not(.active) {
+        display: none;
+    }
+
+    .hero-awards-desktop {
+        display: none;
+    }
+
+    .hero-content {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        order: 1;
+        min-height: 360px;
+    }
+
+    .hero-col-left,
+    .hero-col-right {
+        display: contents;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+ 
+
+    .hero-info {
+        max-width: 100%;
+    }
+
+    .hero-features {
+        margin-bottom: 16px;
+    }
+
+    .hero-features li {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: auto;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+    }
+
+    /* Скрыть десктопную навигацию на мобильном */
+    .hero-nav-desktop {
+        display: none;
+    }
+
+    /* Показать мобильную навигацию */
+    .hero-nav-mobile {
+        display: block;
+    }
+
+    .hero-note {
+        text-align: left;
+        margin-top: 16px;
+    }
+
+    /* Mobile Image */
+    .hero-image-mobile {
+        display: block;
+        margin-top: 24px;
+        margin-left: -30px;
+        margin-right: -30px;
+        order: 2;
+        position: relative;
+        background-color: #1C2472;
+    }
+
+    .hero-image-mobile::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg,
+            rgb(28, 36, 114) 0%,
+            rgba(28, 36, 114, 0.5) 10%,
+            rgba(28, 36, 114, 0.2) 20%,
+            rgba(28, 36, 114, 0) 25%,
+            rgba(28, 36, 114, 0) 75%,
+            rgba(28, 36, 114, 0.2) 80%,
+            rgba(28, 36, 114, 0.5) 90%,
+            rgb(28, 36, 114) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-image-mobile img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        position: relative;
+        z-index: 0;
+    }
+
+    /* Mobile Awards */
+    .hero-awards-mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+        order: 3;
+    }
+
+    .hero-awards-mobile .award-card {
+        flex: 1;
+        width: auto;
+        padding: 14px 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-content {
+        min-height: 320px;
+    }
+
+    .hero-slide {
+        padding: 24px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.05;
+        margin-bottom: 16px;
+    }
+
+    .hero-title.hero-title-v2{
+        margin-top: 0;
+    }
+
+    .hero-features {
+        margin-bottom: 20px;
+    }
+
+    .hero-features li {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        padding: 14px 20px;
+        font-size: 14px;
+        /* width: 100%; */
+        justify-content: space-between;
+    }
+
+    .hero-buttons .d-flex {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+
+    /* .hero-buttons .d-flex .btn-outline-light {
+        flex: 1;
+    } */
+
+    /* Hero Nav Mobile - рядом с кнопкой */
+    .hero-nav-mobile {
+        flex-shrink: 0;
+    }
+
+    .hero-nav-mobile .hero-arrows {
+        gap: 8px;
+    }
+
+    .arrow-btn {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .arrow-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-note {
+        font-size: 10px;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+
+    /* Mobile Image */
+    .hero-image-mobile {
+        margin-top: 20px;
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    /* Mobile Awards */
+    .hero-awards-mobile {
+        margin-top: 16px;
+    }
+
+    .hero-awards-mobile .award-card {
+        padding: 12px 10px;
+    }
+
+    .award-badge img {
+        height: 20px;
+    }
+
+    .award-text {
+        font-size: 11px;
+    }
+
+    .award-text strong {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        min-height: 300px;
+    }
+
+    .hero-slide {
+        padding: 16px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-features li {
+        font-size: 12px;
+        padding-left: 12px;
+    }
+
+    .hero-features li::before {
+        font-size: 6px;
+        line-height: 2.5;
+    }
+
+    .hero-buttons .btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .arrow-btn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+
+    .hero-note {
+        font-size: 9px;
+    }
+
+    .hero-awards-mobile {
+        flex-direction: row;
+    }
+
+    .hero-awards-mobile .award-card {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hero-image-mobile {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .award-text strong{
+        display: inline;
+    }
+}
+
+@media (max-width: 374px) {
+    .hero-content {
+        min-height: 280px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-features li {
+        font-size: 11px;
+    }
+
+    .award-text {
+        font-size: 8px;
+    }
+}
+
+/* ============================================
+   SLIDE 2 - Безупречное немецкое качество
+   ============================================ */
+
+/* Фон для слайда 2 */
+.hero-slide-2 .hero-bg-slide-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-bg-2.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Градиент слева для слайда 2 */
+.hero-slide-2 .hero-bg-slide-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.95) 30%,
+        rgba(28, 36, 114, 0.7) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Градиент снизу для слайда 2 */
+.hero-slide-2 .hero-bg-slide-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.9) 30%,
+        rgba(28, 36, 114, 0.5) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Awards Grid Desktop - сетка 2x3 */
+.hero-awards-grid {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, clamp(160px, 13vw, 210px));
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    z-index: 20;
+}
+
+/* Award Card v2 - стиль карточки для слайда 2 */
+.award-card-v2 {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: clamp(5px, 1vw, 5px) clamp(5px, 0.9vw, 8px);
+    width: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.award-card-v2 .award-badge {
+    margin-bottom: 10px;
+}
+
+.award-card-v2 .award-badge img {
+    height: 24px;
+    width: auto;
+}
+
+.award-card-v2 .award-text {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-text-white-muted);
+    letter-spacing: -0.02em;
+}
+
+.award-card-v2 .award-text strong {
+    display: block;
+    color: var(--color-white);
+    margin-bottom: 2px;
+}
+
+.award-card-v2 .award-text span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Content V2 */ 
+ 
+/* Hero Info V2 */
+.hero-info-v2 {
+    max-width: 100%;
+}
+
+.hero-description {
+    margin-bottom: 24px;
+}
+
+.hero-description p {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    margin: 0 0 16px 0;
+}
+
+.hero-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SLIDE 2 - RESPONSIVE
+   ============================================ */
+
+@media (min-width: 1920px) {
+    .hero-awards-grid {
+        left: calc((100vw - 1920px) / 2 + 40px);
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero-description p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-description p {
+        font-size: 15px;
+    }
+
+    .award-card-v2 .award-badge img {
+        height: 22px;
+    }
+
+    .award-card-v2 .award-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Скрыть десктопную сетку наград */
+    .hero-awards-grid.hero-awards-desktop {
+        display: none;
+    }
+
+    /* Скрыть фон слайда 2 на мобильном */
+    .hero-slide-2 .hero-bg-slide-2 {
+        display: none;
+    } 
+
+    .hero-description {
+        margin-bottom: 16px;
+    }
+
+    .hero-description p {
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+    }
+
+    /* Мобильная сетка наград */
+    .hero-awards-grid-mobile {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+        margin-top: 20px;
+        order: 3;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 {
+        width: 100%;
+        padding: 14px 12px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-badge img {
+        height: 20px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text strong {
+        font-size: 12px;
+    }
+ 
+}
+
+@media (max-width: 768px) {
+    .hero-description p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 {
+        padding: 12px 10px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-badge img {
+        height: 20px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text {
+        font-size: 11px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text strong {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-description p {
+        font-size: 11px;
+    }
+
+    .hero-awards-grid-mobile {
+        gap: 8px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 {
+        padding: 10px 8px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-badge img {
+        height: 18px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text {
+        font-size: 8px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text strong {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 374px) {
+    .hero-description p {
+        font-size: 10px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 {
+        padding: 8px 6px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-badge img {
+        height: 16px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text {
+        font-size: 8px;
+    }
+
+    .hero-awards-grid-mobile .award-card-v2 .award-text strong {
+        font-size: 8px;
+    }
+}
+
+/* ============================================
+   SLIDE 3 - Центр экспертной офтальмологии
+   ============================================ */
+
+/* Фон для слайда 3 */
+.hero-slide-3 .hero-bg-slide-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-bg-3.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Градиент слева для слайда 3 */
+.hero-slide-3 .hero-bg-slide-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.95) 30%,
+        rgba(28, 36, 114, 0.7) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Градиент снизу для слайда 3 */
+.hero-slide-3 .hero-bg-slide-3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.9) 30%,
+        rgba(28, 36, 114, 0.5) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Typography and content for slide 3 */
+
+
+.hero-info-v3 {
+    max-width: 100%;
+}
+
+.hero-description-v3 {
+    margin-bottom: 20px;
+}
+
+.hero-description-v3 p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+    margin: 0 0 16px 0;
+}
+
+.hero-description-v3 p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SLIDE 3 - RESPONSIVE
+   ============================================ */
+ 
+
+@media (max-width: 1200px) { 
+
+    .hero-description-v3 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Скрыть фон слайда 3 на мобильном */
+    .hero-slide-3 .hero-bg-slide-3 {
+        display: none;
+    }
+ 
+    .hero-description-v3 p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+    .award-card-v2 .award-text strong {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-description-v3 p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 576px) { 
+
+    .hero-description-v3 p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 374px) { 
+
+    .hero-description-v3 p {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   SLIDE 4 - Детская клиника №1
+   ============================================ */
+
+/* Фон для слайда 4 */
+.hero-slide-4 .hero-bg-slide-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-bg-4.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Градиент слева для слайда 4 */
+.hero-slide-4 .hero-bg-slide-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.95) 30%,
+        rgba(28, 36, 114, 0.7) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Градиент снизу для слайда 4 */
+.hero-slide-4 .hero-bg-slide-4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.9) 30%,
+        rgba(28, 36, 114, 0.5) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Awards Grid Desktop - 2 колонки + 1 */
+.hero-awards-grid-4 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, clamp(160px, 13vw, 210px));
+    grid-auto-rows: auto;
+    gap: 10px;
+    z-index: 20;
+}
+
+/* Typography and content for slide 4 */
+
+
+.hero-info-v4 {
+    max-width: 100%;
+}
+
+.hero-description-v4 {
+    margin-bottom: 20px;
+}
+
+.hero-description-v4 p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+    margin: 0 0 16px 0;
+}
+
+.hero-description-v4 p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SLIDE 4 - RESPONSIVE
+   ============================================ */
+
+@media (min-width: 1920px) {
+    .hero-awards-grid-4 {
+        left: calc((100vw - 1920px) / 2 + 40px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-description-v4 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Скрыть фон слайда 4 на мобильном */
+    .hero-slide-4 .hero-bg-slide-4 {
+        display: none;
+    }
+
+    /* Скрыть десктопную сетку наград */
+    .hero-awards-grid-4.hero-awards-desktop {
+        display: none;
+    }
+ 
+ 
+    .hero-description-v4 p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    /* Мобильная сетка наград */
+    .hero-awards-grid-mobile-4 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 10px;
+        margin-top: 20px;
+        order: 3;
+    }
+
+    .hero-awards-grid-mobile-4 .award-card {
+        width: 100%;
+        padding: 14px 12px;
+    }
+
+    .hero-awards-grid-mobile-4 .award-card-wide {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) { 
+
+    .hero-description-v4 p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 576px) { 
+
+    .hero-description-v4 p {
+        font-size: 11px;
+    }
+
+    .hero-awards-grid-mobile-4 {
+        gap: 8px;
+    }
+
+    .hero-awards-grid-mobile-4 .award-card {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 374px) { 
+
+    .hero-description-v4 p {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   SLIDE 5 - Центр пластической хирургии
+   ============================================ */
+
+/* Фон для слайда 5 */
+.hero-slide-5 .hero-bg-slide-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-bg-5.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Градиент слева для слайда 5 */
+.hero-slide-5 .hero-bg-slide-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.95) 30%,
+        rgba(28, 36, 114, 0.7) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Градиент снизу для слайда 5 */
+.hero-slide-5 .hero-bg-slide-5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(0deg,
+        rgba(28, 36, 114, 1) 0%,
+        rgba(28, 36, 114, 0.9) 30%,
+        rgba(28, 36, 114, 0.5) 60%,
+        rgba(28, 36, 114, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Typography and content for slide 5 */ 
+.hero-info-v5 {
+    max-width: 100%;
+}
+
+.hero-description-v5 {
+    margin-bottom: 20px;
+}
+
+.hero-description-v5 p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-white);
+    margin: 0 0 16px 0;
+}
+
+.hero-description-v5 p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SLIDE 5 - RESPONSIVE
+   ============================================ */
+ 
+
+@media (max-width: 1200px) { 
+    .hero-description-v5 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Скрыть фон слайда 5 на мобильном */
+    .hero-slide-5 .hero-bg-slide-5 {
+        display: none;
+    } 
+ 
+    .hero-description-v5 p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 768px) { 
+    .hero-description-v5 p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 576px) { 
+
+    .hero-description-v5 p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 374px) { 
+    .hero-description-v5 p {
+        font-size: 10px;
+    }
+}

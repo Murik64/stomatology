@@ -1,0 +1,193 @@
+/* ============================================
+   SECTION: OTHER SPECIALISTS — "Другие специалисты"
+   ============================================ */
+
+.doctor-specialists {
+    background: #fff;
+    padding: 70px 0;
+}
+
+/* --- Section Head --- */
+
+.doctor-section-head--specialists {
+    max-width: 825px;
+    margin: 0 auto 30px;
+}
+
+.doctor-section-head--specialists .section-title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    line-height: 57.2px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.doctor-section-head--specialists .section-subtitle {
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.9);
+}
+
+/* --- Grid --- */
+
+.doctor-specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* --- Card --- */
+
+.doctor-mini-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.doctor-mini-card__photo {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #ededed;
+}
+
+.doctor-mini-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-mini-card__name {
+    margin: 20px 0 0;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: #202020;
+}
+
+.doctor-mini-card__desc {
+    margin: 10px 0 0;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.8);
+}
+
+/* --- Bottom Button --- */
+
+.doctor-specialists-action {
+    margin-top: 30px;
+}
+
+.specialists-btn {
+    font-size: 16px;
+    line-height: 20.8px;
+    padding: 9px 22px;
+    background: transparent;
+    border-color: #202020;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1199px) {
+    .doctor-specialists-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .doctor-section-head--specialists .section-title {
+        font-size: 42px;
+        line-height: 1.08;
+    }
+}
+
+@media (max-width: 991px) {
+    .doctor-specialists {
+        padding: 50px 0;
+    }
+
+    .doctor-specialists-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctor-mini-card__photo {
+        height: 240px;
+    }
+
+    .doctor-section-head--specialists .section-title {
+        font-size: 36px;
+    }
+
+    .doctor-section-head--specialists .section-subtitle {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctor-specialists {
+        padding: 50px 0;
+    }
+
+    .doctor-section-head--specialists {
+        text-align: left;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .doctor-section-head--specialists .section-title {
+        font-size: 28px;
+        line-height: 30.8px;
+        letter-spacing: -0.03em;
+        margin-bottom: 15px;
+    }
+
+    .doctor-section-head--specialists .section-subtitle {
+        font-size: 14px;
+        line-height: 18.2px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-specialists-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+    }
+
+    .doctor-mini-card__photo {
+        height: 165px;
+    }
+
+    .doctor-mini-card__name {
+        font-size: 16px;
+        line-height: 17.6px;
+        letter-spacing: -0.02em;
+        margin-top: 15px;
+    }
+
+    .doctor-mini-card__desc {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-specialists-action {
+        margin-top: 20px;
+    }
+
+    .specialists-btn {
+        font-size: 12px;
+        line-height: 15.6px;
+        padding: 8px 20px;
+    }
+
+    .specialists-btn .btn-arrow {
+        font-size: 11px;
+        line-height: 11px;
+        letter-spacing: 0.22px;
+    }
+}

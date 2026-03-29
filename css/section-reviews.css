@@ -1,0 +1,213 @@
+/* ============================================
+   SECTION REVIEWS - Отзывы пациентов
+   ============================================ */
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.reviews-section {
+    padding: 70px 0 80px;
+    background: #F8F7F3;
+}
+
+.reviews-section.section-dark {
+    background: var(--color-primary);
+}
+
+.reviews-section .section-header {
+    margin-bottom: 30px;
+}
+
+.reviews-section .slider-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.reviews-section .slider-arrows .arrow-btn{
+    border-color: #000;
+    color: #000;
+    
+}
+
+.reviews-section .slider-arrows .arrow-btn:hover{
+    background: var(--color-white);
+}
+
+.reviews-grid {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 1.2vw, 24px);
+}
+
+.review-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 20px;
+}
+
+.review-date {
+    font-size: 12px;
+    line-height: 0.9;
+    color: var(--color-text-light);
+    letter-spacing: -0.02em;
+}
+
+.review-doctor {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin: 30px 0 15px;
+    text-decoration: underline;
+}
+
+.review-text {
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+.review-author {
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-text-light);
+    letter-spacing: -0.02em;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Section actions */
+.section-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 50px 0;
+    }
+
+    /* Flex-контейнер для изменения порядка элементов */
+    .reviews-section .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reviews-section .section-header {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    /* Кнопки — перед стрелками и карточками */
+    .reviews-section .section-actions {
+        order: 5;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        margin-top: 15px !important;
+    }
+
+    .reviews-section .section-actions .btn {
+        width: auto;
+        font-size: 12px;
+        line-height: 1.3;
+        padding: 8px 20px;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    /* Первая кнопка "Оставить отзыв" — с заливкой */
+    .reviews-section .section-actions .btn:first-child {
+        background: rgba(32, 32, 32, 0.05);
+    }
+
+    .reviews-section .section-actions .btn .btn-arrow {
+        font-size: 11px;
+        margin-left: 0;
+    }
+
+    /* Стрелки слайдера — влево, 32px */
+    .reviews-section .slider-arrows {
+        order: 3;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-bottom: 20px !important;
+        
+    }
+
+    .reviews-section .slider-arrows .arrow-btn {
+        width: 32px;
+        height: 32px;
+        border-color: var(--color-text);
+        color: var(--color-text);
+    }
+
+    /* Карточки отзывов */
+    .reviews-section .reviews-grid {
+        order: 4;
+    }
+
+    .reviews-grid {
+        display: flex;
+        align-items: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow-y: hidden;
+    }
+
+    .reviews-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .review-card {
+        flex: 0 0 220px;
+        scroll-snap-align: start;
+        margin-right: 10px;
+        padding: 14px;
+    }
+
+    .review-card:last-child {
+        margin-right: 20px;
+    }
+
+    .review-date {
+        font-size: 10px;
+    }
+
+    .review-doctor {
+        font-size: 16px;
+        margin: 20px 0 10px;
+    }
+
+    .review-text {
+        font-size: 10px;
+    }
+
+    .review-author {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+}

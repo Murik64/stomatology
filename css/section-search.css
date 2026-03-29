@@ -1,0 +1,301 @@
+/* ============================================
+   SECTION SEARCH - Поиск врача
+   ============================================ */
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.search-section {
+    padding: 20px 20px 20px;
+    background: var(--color-white);
+}
+
+.search-card {
+    position: relative;
+    width: 100%;
+    min-height: clamp(360px, 32vw, 560px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/search-bg.png');
+    background-size: cover;
+    background-position: center top;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.search-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+            rgba(141, 151, 186, 0.4) 0%,
+            rgba(89, 100, 148, 0.4) 30%,
+            rgba(55, 65, 130, 0.4) 60%,
+            rgba(35, 44, 105, 1) 100%);
+    z-index: 1;
+}
+
+.search-card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.search-text-group {
+    margin-bottom: 30px;
+}
+
+.search-title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.search-subtitle {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 635px;
+    margin: 0 auto;
+}
+
+.search-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 670px;
+}
+
+.search-input-field {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    padding: 0 30px 12px 0;
+    outline: none;
+}
+
+.search-input-field::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-input-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -5px;
+}
+
+.search-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-white);
+}
+
+.search-btn-arrow {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* Legacy classes for compatibility */
+.search-form-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.search-form {
+    position: relative;
+    flex: 1;
+    max-width: 670px;
+}
+
+.search-form-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 18px;
+    padding: 0 40px 10px 0;
+    outline: none;
+}
+
+.search-form-input::placeholder {
+    color: var(--color-text-white-light);
+}
+
+.search-form-icon {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    color: var(--color-white);
+    font-size: 14px;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .search-card {
+        min-height: 450px;
+    }
+
+    .search-title {
+        font-size: 40px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .search-section {
+        padding: 10px;
+    }
+
+    .search-card {
+        height: auto;
+        min-height: 400px;
+        padding: 40px 20px;
+    }
+
+    .search-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .search-subtitle {
+        font-size: 14px;
+    }
+
+    .search-input-field {
+        font-size: 14px;
+    }
+
+    .search-form-group {
+        gap: 20px;
+    }
+
+    .search-input-wrapper {
+        max-width: 100%;
+    }
+
+    .search-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        background-color: var(--color-bg-white-light);
+    }
+}
+
+@media (min-width: 1920px) {
+    .search-card {
+        min-height: clamp(560px, 30vw, 720px);
+    }
+
+    .search-card-content {
+        max-width: 900px;
+    }
+
+    .search-input-wrapper {
+        max-width: 800px;
+    }
+
+    .search-title {
+        font-size: 62px;
+    }
+
+    .search-subtitle {
+        font-size: 20px;
+        max-width: 740px;
+    }
+
+    .search-input-field {
+        font-size: 20px;
+    }
+
+    .search-btn {
+        font-size: 18px;
+        padding: 14px 32px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .search-card-content {
+        max-width: 1000px;
+    }
+
+    .search-input-wrapper {
+        max-width: 880px;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-card {
+        min-height: 360px;
+        padding: 15px 5px;
+    }
+
+    .search-title {
+        font-size: 28px;
+    }
+
+    .search-subtitle {
+        font-size: 14px;
+    }
+}

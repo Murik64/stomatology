@@ -1,0 +1,325 @@
+/* ============================================
+   ABOUT - AWARDS (Section 2)
+   Секция с наградами клиники
+   Figma: node-id=684-606
+   ============================================ */
+
+.about-awards {
+    position: relative;
+    padding: 40px 0 50px;
+    background: var(--color-bg-cream);
+    overflow: hidden;
+}
+
+/* Декоративный паттерн на фоне (Pattern_flower of life) */
+.about-awards::before {
+    content: "";
+    position: absolute;
+    top: -300px;
+    right: 0;
+    width: 100%;
+    height: max(100%, 1000px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='10' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='90' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='15' cy='30' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='85' cy='30' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='15' cy='70' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3Ccircle cx='85' cy='70' r='40' fill='none' stroke='%23e5e3de' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: 100px 100px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-awards .container-fluid {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+/* ============================================
+   ХЛЕБНЫЕ КРОШКИ
+   ============================================ */
+.about-breadcrumbs {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.5);
+    margin-bottom: 28px;
+}
+
+.about-breadcrumbs a {
+    color: rgba(32, 32, 32, 0.5);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.about-breadcrumbs a:hover {
+    color: var(--color-accent-orange);
+}
+
+.about-breadcrumbs__current {
+    color: var(--color-text);
+}
+
+/* ============================================
+   СЕТКА НАГРАД
+   7 карточек в ряд на десктопе
+   ============================================ */
+.about-awards__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+}
+
+/* ============================================
+   КАРТОЧКА НАГРАДЫ
+   Figma: 185x160px
+   ============================================ */
+.about-awards__card {
+    background: #F8F7F3;
+    border: 1px solid #D2D2D2;
+    border-radius: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 160px;
+    transition: all 0.3s ease;
+}
+
+.about-awards__card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(28, 36, 114, 0.08);
+}
+
+/* ============================================
+   ЛОГОТИП НАГРАДЫ
+   Figma: позиция сверху карточки
+   ============================================ */
+.about-awards__logo {
+    max-width: 108px;
+    height: 30px;
+    object-fit: contain;
+    object-position: left center;
+    flex-shrink: 0;
+}
+
+/* Значки (badges) - больше по размеру */
+.about-awards__logo--badge {
+    max-width: 52px;
+    height: 40px;
+}
+
+/* ============================================
+   ТЕКСТ НАГРАДЫ
+   Figma: style_LKL2G6
+   ============================================ */
+.about-awards__text {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.9);
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .about-awards {
+        padding: 50px 0 60px;
+    }
+
+    .about-awards__grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 24px;
+    }
+
+    .about-awards__card {
+        min-height: 180px;
+        padding: 24px;
+    }
+
+    .about-awards__text {
+        font-size: 16px;
+    }
+
+    .about-awards__logo {
+        max-width: 120px;
+        height: 34px;
+    }
+
+    .about-awards__logo--badge {
+        max-width: 58px;
+        height: 44px;
+    }
+
+    .about-breadcrumbs {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Desktop Large (1400px-1600px)
+   ============================================ */
+@media (max-width: 1600px) and (min-width: 1400px) {
+    .about-awards__grid {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Desktop (1200px-1400px)
+   ============================================ */
+@media (max-width: 1400px) {
+    .about-awards__grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Tablet Large (992px-1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .about-awards__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+    
+    .about-awards__card {
+        padding: 18px 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Tablet (768px-992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .about-awards {
+        padding: 35px 0 45px;
+    }
+
+    .about-awards__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .about-awards__card {
+        min-height: 150px;
+        padding: 18px 16px;
+    }
+    
+    .about-awards__text {
+        font-size: 13px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile Large (576px-768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .about-awards {
+        padding: 30px 0 40px;
+    }
+
+    .about-awards::before {
+        opacity: 0.4;
+    }
+
+    .about-awards__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .about-awards__card {
+        min-height: 140px;
+        padding: 16px 14px;
+    }
+
+    .about-breadcrumbs {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .about-awards__text {
+        font-size: 12px;
+    }
+
+    .about-awards__logo {
+        max-width: 90px;
+        height: 26px;
+    }
+
+    .about-awards__logo--badge {
+        max-width: 45px;
+        height: 35px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile (до 576px)
+   ============================================ */
+@media (max-width: 576px) {
+    .about-awards {
+        padding: 25px 0 35px;
+    }
+
+    .about-awards__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 7px;
+    }
+
+    .about-awards__card {
+        min-height: 130px;
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
+    .about-awards__text {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+    .about-awards__logo {
+        max-width: 80px;
+        height: 24px;
+    }
+
+    .about-awards__logo--badge {
+        max-width: 40px;
+        height: 32px;
+    }
+
+    .about-breadcrumbs {
+        font-size: 10px;
+        margin-bottom: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - Mobile Extra Small (до 374px)
+   ============================================ */
+@media (max-width: 374px) {
+    .about-awards__card {
+        min-height: 70px;
+        padding: 12px 8px;
+    }
+
+    .about-awards__text {
+        font-size: 9px;
+    }
+
+    .about-awards__logo {
+        max-width: 70px;
+        height: 22px;
+    }
+
+    .about-awards__logo--badge {
+        max-width: 36px;
+        height: 23px;
+    }
+}

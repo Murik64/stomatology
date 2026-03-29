@@ -1,0 +1,1002 @@
+/* ============================================
+   HEADER - Стили шапки и мобильного меню
+   ============================================ */
+
+/* ============================================
+   DESKTOP HEADER
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--color-white);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.header-scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Menu Level 1 - Departments */
+.menu-level-1 {
+    height: 40px;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.menu-level-1-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.department-link {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 0;
+    transition: var(--transition-fast);
+    line-height: 1.2;
+}
+
+.department-link:hover {
+    opacity: 0.8;
+}
+
+.dept-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 18px;
+}
+
+.dept-icon img {
+    width: 16px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.dept-divider {
+    width: 1px;
+    height: 40px;
+    background: #D2D2D2;
+    flex-shrink: 0;
+}
+
+.department-pediatrics {
+    color: #CB542D;
+}
+
+.department-ophthalmology {
+    color: #2E57CB;
+}
+
+.department-preventive {
+    color: #00687A;
+}
+
+.department-dentistry {
+    color: #443E9E;
+}
+
+.department-aesthetic {
+    color: #998158;
+}
+
+/* Menu Level 2 - Contacts */
+.menu-level-2 {
+    height: 35px;
+    background: var(--color-primary);
+}
+
+.menu-level-2-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.menu-level-2-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-level-2-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-link,
+.time-info,
+.header-link {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.02em;
+}
+
+.contact-link {
+    font-family: var(--font-ui);
+}
+
+.contact-link:hover,
+.header-link:hover {
+    color: var(--color-white);
+    opacity: 0.8;
+}
+
+.menu-search-box {
+    position: relative;
+    width: 400px;
+}
+
+.menu-search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--color-white);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 12px;
+    padding: 0 30px 5px 0;
+    outline: none;
+    letter-spacing: 0.02em;
+}
+
+.menu-search-input::placeholder {
+    color: var(--color-text-white-muted);
+}
+
+.menu-search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -2px;
+}
+
+/* Legacy search classes */
+.search-box {
+    position: relative;
+    width: 400px;
+}
+
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 12px;
+    padding: 0 30px 5px 0;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--color-text-white-muted);
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-white);
+}
+
+/* Menu Level 3 - Navigation */
+.menu-level-3 {
+    height: 64px;
+    background: var(--color-white);
+}
+
+.menu-level-3-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-item-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-text);
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: var(--color-text-hover);
+}
+
+.nav-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-dropdown .nav-arrow {
+    transition: transform var(--transition-fast);
+    margin-left: 3px;
+}
+
+.nav-item-wrapper:hover .nav-dropdown .nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-white);
+    border: 1px solid #D5D5D5;
+    padding: 15px;
+    min-width: 183px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    z-index: 100;
+    margin-top: 15px;
+}
+
+/* Невидимый мост между ссылкой и меню для сохранения hover */
+.nav-item-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    display: none;
+}
+
+.nav-item-wrapper:hover::after {
+    display: block;
+}
+
+.nav-item-wrapper:hover .nav-dropdown-menu {
+    display: flex;
+}
+
+.nav-dropdown-menu a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-text);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    padding: 5px 0;
+}
+
+.nav-dropdown-menu a:hover {
+    color: var(--color-text-hover);
+}
+
+.nav-dropdown-menu-wide {
+    min-width: 341px;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-header {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid rgba(32, 32, 32, 0.7);
+    padding: 6px 15px;
+    backdrop-filter: blur(4px);
+    transition: var(--transition-normal);
+    line-height: 1.2;
+}
+
+.btn-header:hover {
+    background: var(--color-bg-button-hover);
+    color: var(--color-text);
+}
+
+/* ============================================
+   MOBILE HEADER
+   ============================================ */
+.mobile-header,
+.mobile-menu {
+    display: none;
+}
+
+.mobile-header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: var(--color-white);
+    height: 60px;
+    box-shadow: 0px 4px 4px 0px #2020201A;
+
+}
+
+.mobile-logo {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-logo img {
+    height: 30px;
+    width: auto;
+}
+
+.mobile-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+}
+
+.mobile-header-icon:hover {
+    opacity: 0.7;
+}
+
+.mobile-header-icon svg,
+.mobile-header-icon img {
+    width: auto;
+    height: 18px;
+}
+
+.menu-toggle {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 1px;
+    background: var(--color-text);
+    display: block;
+    transition: var(--transition-fast);
+}
+
+.menu-toggle-close {
+    padding: 8px;
+    font-size: 20px;
+}
+
+.menu-toggle-close i {
+    font-size: 20px;
+}
+
+/* ============================================
+   MOBILE MENU PANEL
+   ============================================ */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2000;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-panel {
+    background: var(--color-white);
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu.active .mobile-menu-panel {
+    transform: translateX(0);
+}
+
+/* Шапка мобильного меню */
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    background: var(--color-white);
+    z-index: 10;
+}
+
+.mobile-menu-logo {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.mobile-menu-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+}
+
+.mobile-menu-icon svg,
+.mobile-menu-icon img {
+    width: auto;
+    height: 18px;
+}
+
+.mobile-menu-icon:hover {
+    opacity: 0.7;
+}
+
+.mobile-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+    opacity: 0.7;
+}
+
+/* Навигация мобильного меню */
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Пункт навигации с подменю (аккордеон) */
+.mobile-nav-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.mobile-nav-toggle span {
+    display: block;
+}
+
+.mobile-nav-arrow {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 5px;
+}
+
+.mobile-nav-item.active .mobile-nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* Подменю (скрытое по умолчанию) */
+.mobile-nav-submenu {
+    display: none;
+    flex-direction: column;
+    padding: 0 20px 16px 20px;
+}
+
+.mobile-nav-item.active .mobile-nav-submenu {
+    display: flex;
+}
+
+.mobile-nav-submenu a {
+    display: block;
+    padding: 10px 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text);
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-submenu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-submenu a:hover {
+    color: var(--color-primary);
+}
+
+/* Простая ссылка навигации (без подменю) */
+.mobile-nav-link {
+    display: block;
+    padding: 16px 20px;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    color: var(--color-text);
+}
+
+/* Направления (цветные ссылки) */
+.mobile-menu-departments {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+}
+
+.mobile-dept-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease;
+}
+
+.mobile-dept-link:hover {
+    opacity: 0.8;
+}
+
+.mobile-dept-link svg,
+.mobile-dept-link img {
+    flex-shrink: 0;
+    width: 16px;
+    height: 18px;
+}
+
+.mobile-dept-pediatrics {
+    color: #CB542D;
+}
+
+.mobile-dept-ophthalmology {
+    color: #2E57CB;
+}
+
+.mobile-dept-preventive {
+    color: #00687A;
+}
+
+.mobile-dept-dentistry {
+    color: #443E9E;
+}
+
+.mobile-dept-aesthetic {
+    color: #998158;
+}
+
+/* Кнопки действий */
+.mobile-menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    background: transparent;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+    background-color: var(--color-bg-light);
+    border-color: var(--color-text);
+    color: var(--color-text);
+}
+
+/* Контактная информация */
+.mobile-menu-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    margin-top: auto;
+}
+
+.mobile-menu-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--color-text);
+    transition: color 0.2s ease;
+}
+
+.mobile-menu-phone:hover {
+    color: var(--color-primary);
+}
+
+.mobile-menu-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE MENU ADJUSTMENTS
+   ============================================ */
+@media (max-width: 374px) {
+    /* Mobile header */
+    .mobile-header {
+        padding: 10px 15px;
+        padding-left: var(--content-padding-inline) !important;
+        padding-right: var(--content-padding-inline) !important;    
+        height: 54px;
+    }
+
+    .mobile-logo img {
+        height: 26px;
+    }
+
+    .mobile-header-actions {
+        gap: 10px;
+    }
+
+    .mobile-header-icon svg,
+    .mobile-header-icon img {
+        height: 15px;
+    }
+
+    .menu-toggle {
+        width: 24px;
+        height: 16px;
+        margin-left: 10px;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+    }
+
+    /* Mobile menu */
+    .mobile-menu-header {
+        padding: 12px 15px;
+    }
+
+    .mobile-menu-header-actions {
+        gap: 10px;
+    }
+
+    .mobile-menu-icon svg,
+    .mobile-menu-icon img {
+        height: 15px;
+    }
+
+    .mobile-nav-toggle,
+    .mobile-nav-link {
+        padding: 14px 15px;
+        font-size: 14px;
+    }
+
+    .mobile-nav-submenu {
+        padding: 0 15px 14px 15px;
+    }
+
+    .mobile-nav-submenu a {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+
+    .mobile-menu-departments {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .mobile-dept-link {
+        font-size: 13px;
+    }
+
+    .mobile-menu-actions {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .mobile-menu-btn {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .mobile-menu-contacts {
+        padding: 15px;
+    }
+
+    .mobile-menu-phone,
+    .mobile-menu-time {
+        font-size: 12px;
+    }
+}
+
+/* Landscape mode для мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+    .mobile-menu-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .mobile-menu-header {
+        grid-column: 1 / -1;
+    }
+
+    .mobile-menu-nav {
+        grid-column: 1;
+        overflow-y: auto;
+    }
+
+    .mobile-menu-departments {
+        grid-column: 2;
+        grid-row: 2;
+        overflow-y: auto;
+    }
+
+    .mobile-menu-actions {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .mobile-menu-contacts {
+        grid-column: 2;
+        grid-row: 3;
+        margin-top: 0;
+    }
+}
+
+html.menu-open,
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Mobile departments bar (горизонтальная полоса под шапкой) */
+.mobile-departments {
+    display: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 20px;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    gap: 20px;
+}
+
+.mobile-departments::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-department-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .menu-level-1-inner,
+    .menu-level-2-inner,
+    .menu-level-3-inner {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header-actions a{
+        display: block !important;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1200px) {
+    .menu-level-1 {
+        display: none;
+    }
+
+    .logo{
+        left: 60%;
+    }
+ 
+}
+
+@media (max-width: 1024px) {
+    .menu-level-1,
+    .menu-level-2,
+    .menu-level-3 {
+        display: none;
+    }
+ 
+    .mobile-header {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-departments {
+        display: flex;
+    }
+
+    .menu-level-2 .search-box {
+        display: none;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .header {
+        position: sticky;
+        top: 0;
+    }
+ 
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .mobile-breadcrumbs {
+        display: block;
+        padding: 10px 0;
+        padding-left: var(--content-padding-inline) !important;
+        padding-right: var(--content-padding-inline) !important;
+        background: var(--color-white);
+      }
+    
+    .mobile-breadcrumbs__text {
+        margin: 0;
+        font-size: 10px;
+        line-height: 1.2;
+        color: #000;
+    }
+
+    .mobile-breadcrumbs__text span {
+        color: #9d9d9d;
+    }
+
+    .mobile-breadcrumbs__text strong {
+        font-weight: 400;
+        color: #000;
+    }
+}

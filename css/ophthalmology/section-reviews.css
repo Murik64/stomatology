@@ -1,0 +1,304 @@
+/* ============================================
+   ОФТАЛЬМОЛОГИЯ — REVIEWS OVERRIDES
+   «Отзывы пациентов» (ophthalmology-specific)
+   Figma node: 1362:4860
+   ============================================ */
+
+/* Tabs */
+.ophthalmology-reviews__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.ophthalmology-reviews__tab {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: var(--color-text);
+    opacity: 0.5;
+    background: none;
+    border: none;
+    min-width: 180px;
+    padding: 0 0 8px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    text-transform: uppercase;
+}
+
+.ophthalmology-reviews__tab.active {
+    opacity: 1;
+}
+
+.ophthalmology-reviews__tab:hover {
+    opacity: 0.75;
+}
+
+.ophthalmology-reviews__tab.active:hover {
+    opacity: 1;
+}
+
+.ophthalmology-reviews__tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--color-text);
+}
+
+/* Video cards grid */
+.ophthalmology-reviews__video-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.ophthalmology-reviews__video-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ophthalmology-reviews__video-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 256 / 450;
+    overflow: hidden;
+    background: #ECECEC;
+    border: 1px solid #D2D2D2;
+}
+
+.ophthalmology-reviews__video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ophthalmology-reviews__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    pointer-events: none;
+}
+
+.ophthalmology-reviews__play svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+
+.ophthalmology-reviews .section-actions {
+    gap: 20px;
+}
+
+.ophthalmology-reviews__btn-primary {
+    background: rgba(46, 87, 203, 0.05) !important;
+    border-color: var(--color-text) !important;
+}
+
+.ophthalmology-reviews__btn-primary:hover {
+    background: rgba(46, 87, 203, 0.12) !important;
+}
+
+/* Text reviews tab — Figma 1366:6266 */
+.ophthalmology-reviews .reviews-grid {
+    gap: 20px;
+}
+
+.ophthalmology-reviews .review-card {
+    border-color: #D2D2D2;
+}
+
+.ophthalmology-reviews .review-date {
+    opacity: 0.5;
+}
+
+.ophthalmology-reviews .review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.ophthalmology-reviews .review-author {
+    margin-top: 0;
+    opacity: 0.5;
+}
+
+.ophthalmology-reviews .review-more {
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.ophthalmology-reviews .review-doctor {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.ophthalmology-reviews .slider-arrows .arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text);
+    padding: 0;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.ophthalmology-reviews .slider-arrows .arrow-btn:hover {
+    background: rgba(32, 32, 32, 0.12);
+}
+
+.ophthalmology-reviews .slider-arrows .arrow-btn svg {
+    width: 18px;
+    height: 15px;
+}
+
+.ophthalmology-reviews .slider-arrows .arrow-btn i {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .ophthalmology-reviews__video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .ophthalmology-reviews__video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ophthalmology-reviews__tabs {
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .ophthalmology-reviews__tab {
+        font-size: 16px;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ophthalmology-reviews .section-header {
+        text-align: left;
+    }
+
+    .ophthalmology-reviews .section-title {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .ophthalmology-reviews .section-subtitle {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .ophthalmology-reviews .review-doctor {
+        font-size: 16px;
+    }
+
+    .ophthalmology-reviews .slider-arrows .arrow-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ophthalmology-reviews .slider-arrows .arrow-btn svg {
+        width: 14px;
+        height: 12px;
+    }
+
+    .ophthalmology-reviews__tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-bottom: 20px;
+        order: 2;
+        width: 100%;
+    }
+
+    .ophthalmology-reviews__tab {
+        font-size: 16px;
+        min-width: 100%;
+        text-align: center;
+        padding: 0 0 5px;
+        border-bottom: 1px solid #D2D2D2;
+        margin-bottom: 12px;
+    }
+
+    .ophthalmology-reviews__tab:last-child {
+        margin-bottom: 0;
+    }
+
+    .ophthalmology-reviews__tab.active {
+        border-bottom-color: var(--color-text);
+        border-bottom-width: 2px;
+    }
+
+    .ophthalmology-reviews__tab.active::after {
+        display: none;
+    }
+
+    .ophthalmology-reviews__video-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 0 15px 10px;
+        margin: 0 -15px;
+        order: 4;
+    }
+
+    .ophthalmology-reviews .section-actions {
+        margin-top: 20px !important;
+    }
+
+    .ophthalmology-reviews__video-card {
+        flex: 0 0 220px;
+        scroll-snap-align: start;
+    }
+
+    .ophthalmology-reviews__video-thumb {
+        width: 100%;
+        aspect-ratio: 220 / 385;
+    }
+
+    .ophthalmology-reviews__play {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+@media (max-width: 576px) { 
+    
+    .ophthalmology-reviews__tab.active {
+        border-bottom-color: var(--color-text);
+        border-bottom-width: 1px;
+    }
+}

@@ -1,0 +1,327 @@
+/* ============================================
+   SECTION DIRECTIONS - Все направления
+   ============================================ */
+
+.directions-section {
+    padding: 80px 0 90px;
+    background: var(--color-bg-light);
+}
+
+/* Header */
+.directions-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.directions-title {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.directions-subtitle {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tabs */
+.directions-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 40px;
+}
+
+.directions-tab {
+    background: none;
+    border: none;
+    padding: 12px 40px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.directions-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
+    transition: background-color 0.3s ease;
+}
+
+.directions-tab.active {
+    color: var(--color-text);
+}
+
+.directions-tab.active::after {
+    background: var(--color-text);
+}
+
+.directions-tab:hover:not(.active) {
+    color: var(--color-text-muted);
+}
+
+/* Content */
+.directions-content {
+    width: 100%;
+}
+
+.directions-pane {
+    display: none;
+}
+
+.directions-pane.active {
+    display: block;
+}
+
+/* Grid */
+.directions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+}
+
+/* Direction Item */
+.direction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: #FDFCFA;
+    border: 1px solid var(--color-border);
+    margin-bottom: -1px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.direction-item:hover {
+    background: #F4F4F4
+}
+
+.direction-text {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+}
+
+.direction-arrow {
+    font-family: var(--font-ui);
+    font-size: 18px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+/* Action Button */
+.directions-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.directions-action .btn {
+    padding: 14px 32px;
+    font-size: 15px;
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .directions-title {
+        font-size: 58px;
+    }
+
+    .directions-subtitle {
+        font-size: 18px;
+    }
+
+    .directions-grid {
+        gap: 0 32px;
+    }
+
+    .direction-item {
+        padding: 22px 28px;
+    }
+
+    .direction-text {
+        font-size: 20px;
+    }
+
+    .directions-tab {
+        font-size: 18px;
+        padding: 14px 48px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .directions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .directions-section {
+        padding: 60px 0 70px;
+    }
+
+    .directions-title {
+        font-size: 40px;
+    }
+
+    .directions-tab {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+
+    .direction-text {
+        font-size: 16px;
+    }
+
+    .direction-item {
+        padding: 16px 20px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .directions-section {
+        padding: 50px 0 60px;
+    }
+
+    .directions-header {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .directions-title {
+        font-size: 28px;
+        margin-bottom: 16px;
+        line-height: 1.1;
+    }
+
+    .directions-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Mobile Tabs - vertical согласно дизайну */
+    .directions-tabs {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .directions-tab {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text-light);
+    }
+
+    .directions-tab::after {
+        display: none;
+    }
+
+    .directions-tab.active {
+        color: var(--color-text);
+        border-bottom-color: var(--color-text);
+    }
+
+    /* Mobile Grid - single column */
+    .directions-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .direction-item {
+        margin-right: 0;
+        padding: 14px 16px;
+        /* border-left: none; */
+        /* border-right: none; */
+        margin-bottom: 5px;
+    }
+
+    .direction-item:first-child {
+        border-top: none;
+    }
+
+    .direction-text {
+        font-size: 14px;
+    }
+
+    .direction-arrow {
+        font-size: 14px;
+        color: var(--color-text-light);
+    }
+
+    .directions-action {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .directions-action .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .directions-title {
+        font-size: 28px;
+    }
+
+    .directions-subtitle {
+        font-size: 14px;
+    }
+
+    .direction-item {
+        padding: 14px 16px;
+    }
+
+    .direction-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 374px) {
+    .directions-title {
+        font-size: 24px;
+    }
+
+    .direction-item {
+        padding: 12px 14px;
+    }
+
+    .direction-text {
+        font-size: 13px;
+    }
+}

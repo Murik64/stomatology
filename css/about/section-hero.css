@@ -1,0 +1,670 @@
+/* ============================================
+   ABOUT - HERO (Section 1) - Bootstrap 5 Version
+   Figma Desktop: node-id=684-436 (1440x745px)
+   Figma Mobile: node-id=704-1986 (320x580px)
+   ============================================ */
+
+/* ============================================
+   ОСНОВНАЯ СЕКЦИЯ
+   ============================================ */
+.about-hero {
+    overflow: hidden;
+    background: #1c2472;
+}
+
+/* ============================================
+   ЛЕВАЯ ЧАСТЬ - Hero с фоном
+   Desktop: 50% ширины (730px из 1440px), высота 745px
+   ============================================ */
+.about-hero__left {
+    min-height: clamp(580px, 48vw, 860px);
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+}
+
+/* Фоновое изображение Desktop */
+.about-hero__bg-desktop {
+    z-index: 1;
+}
+
+.about-hero__bg img {
+    object-position: center;
+}
+
+/* Градиент поверх фона
+   Desktop: linear-gradient(180deg, rgba(28, 36, 114, 0) 48%, rgba(28, 36, 114, 1) 66%) */
+.about-hero__gradient {
+    background: 
+    linear-gradient(to left, rgba(28,36,114,1), transparent 35%),
+    linear-gradient(to top, rgba(28,36,114,1), transparent 35%);
+    z-index: 2;
+}
+
+/* Контент
+   Desktop: padding left:40px, bottom:100px, width:669px */
+.about-hero__content {
+    z-index: 3;
+    padding: 0 40px 0 0;
+    margin-bottom: -20px;
+}
+
+/* Hero Image Mobile - скрыто на desktop */
+.about-hero__image-mobile {
+    display: none;
+}
+
+/* Заголовок
+   Desktop: Forum, 52px, line-height: 1em, letter-spacing: -2%
+   Mobile: Forum, 32px, line-height: 0.9em, letter-spacing: -3% */
+.about-hero__title {
+    font-family: var(--font-heading, 'Forum', serif);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+/* Описание
+   Desktop: Open Sans, 18px, line-height: 1.3em, letter-spacing: -2%
+   Mobile: Open Sans, 12px, line-height: 1.3em, letter-spacing: -3% */
+.about-hero__lead {
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* Кнопки
+   Desktop: padding: 9px 22px, gap: 5px внутри, fontSize: 16px
+   Mobile: padding: 8px 20px, gap: 3px, fontSize: 12px */
+.about-hero__btn {
+    padding: 9px 22px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #FFFFFF;
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    width: fit-content;
+}
+
+.about-hero__btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+}
+
+.about-hero__btn span:last-child {
+    font-family: var(--font-ui, 'Inter', sans-serif);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+/* Сноски
+   Desktop: Open Sans, 10px, line-height: 1.5em, letter-spacing: -2%, rgba(255,255,255,0.8)
+   Mobile: Open Sans, 6px */
+.about-hero__note {
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+}
+
+/* ============================================
+   ПРАВАЯ ЧАСТЬ - Карточки клиник
+   Desktop: 50% ширины, padding: 40px 40px 40px 0
+   ============================================ */
+.about-hero__right {
+    padding: 40px 0 40px 0;
+    min-height: clamp(580px, 48vw, 860px);
+}
+
+/* ============================================
+   КАРТОЧКИ КЛИНИК
+   Desktop: 325x208px, border: 1px solid #D2D2D2
+   ============================================ */
+.clinic-card {
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    display: flex;
+    flex-direction: column;
+    min-height: 208px;
+}
+
+/* Заголовок карточки
+   Forum, 20px, line-height: 1em, letter-spacing: -2%, color: #202020 */
+.clinic-card__title {
+    font-family: var(--font-heading, 'Forum', serif);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #202020;
+    margin-bottom: 35px;
+}
+
+/* Время работы и метро
+   Open Sans, 12px, line-height: 1.3em, color: #202020 */
+.clinic-card__hours,
+.clinic-card__metro {
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #202020;
+}
+
+/* Метро с индикатором */
+.clinic-card__metro {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clinic-card__metro::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Цвета метро из Figma */
+.clinic-card__metro--red::after {
+    background-color: #CB542D;
+}
+
+.clinic-card__metro--blue::after {
+    background-color: #2E57CB;
+}
+
+/* Адрес
+   Inter, 12px, line-height: 1.3em, letter-spacing: -1%, color: #202020 */
+.clinic-card__address {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #202020;
+    margin-top: auto;
+}
+
+
+.clinic-card__address span{
+    font-size: 10px;
+}
+
+@media(min-width: 1550px){
+    .about-hero__content{
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP LARGE (до 1400px)
+   ============================================ */
+@media (max-width: 1400px) {
+    .about-hero__left {
+        min-height: 680px;
+    }
+
+    .about-hero__right {
+        min-height: 680px;
+        padding: 30px 0 30px 0;
+    }
+
+    .about-hero__content {
+        padding: 0 30px 40px 0;
+        max-width: 600px;
+    }
+
+    .about-hero__title {
+        font-size: 46px;
+    }
+
+    .about-hero__lead {
+        font-size: 16px;
+    }
+
+    .clinic-card {
+        min-height: 190px;
+        padding: 18px;
+    }
+
+    .clinic-card__title {
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .about-hero > .container-fluid {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP MEDIUM (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .about-hero__left {
+        min-height: 640px;
+    }
+
+    .about-hero__right {
+        min-height: 640px;
+    }
+
+    .about-hero__content {
+        padding: 0 24px 60px 0;
+        max-width: 550px;
+    }
+
+    .about-hero__title {
+        font-size: 40px;
+    }
+
+    .about-hero__lead {
+        font-size: 15px;
+    }
+
+    .clinic-card {
+        min-height: 180px;
+        padding: 16px;
+    }
+
+    .clinic-card__title {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .clinic-card__hours,
+    .clinic-card__metro,
+    .clinic-card__address {
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (до 992px)
+   Вертикальная раскладка
+   ============================================ */
+@media (max-width: 991.98px) {
+    .about-hero__left {
+        min-height: auto;
+        background: #1c2472;
+    }
+
+    /* Скрыть desktop фон на планшете */
+    .about-hero__bg-desktop {
+        display: none;
+    }
+
+    .about-hero__content {
+        position: relative;
+        padding: 30px 24px 30px 0;
+        max-width: 100%;
+        margin-bottom: 0;
+        min-height: 360px;
+    }
+
+    .about-hero__title {
+        font-size: 36px;
+    }
+
+    .about-hero__lead {
+        font-size: 14px;
+    }
+
+    /* Mobile Image - показываем на планшете */
+    .about-hero__image-mobile {
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        background-color: #1C2472;
+    }
+
+    .about-hero__image-mobile::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg,
+            rgb(28, 36, 114) 0%,
+            rgba(28, 36, 114, 0.5) 10%,
+            rgba(28, 36, 114, 0.2) 20%,
+            rgba(28, 36, 114, 0) 25%,
+            rgba(28, 36, 114, 0) 75%,
+            rgba(28, 36, 114, 0.2) 80%,
+            rgba(28, 36, 114, 0.5) 90%,
+            rgb(28, 36, 114) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .about-hero__image-mobile img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        position: relative;
+        z-index: 0;
+    }
+
+    .about-hero__right {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .about-hero__right .row {
+        --bs-gutter-x: 20px;
+        --bs-gutter-y: 20px;
+    }
+
+    .clinic-card {
+        min-height: 170px;
+        padding: 16px;
+    }
+
+    .clinic-card__title {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (до 768px)
+   Мобильная версия с изображением внизу контента
+   Figma Mobile: 320x580px, node-id=704-1986
+   ============================================ */
+@media (max-width: 768px) {
+    .about-hero__left {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 0;
+    }
+
+    /* Скрыть desktop фон */
+    .about-hero__bg-desktop {
+        display: none;
+    }
+
+    /* Контент идет первым */
+    .about-hero__content {
+        position: relative;
+        padding: 0;
+        margin-bottom: 0;
+        min-height: auto;
+        order: 1;
+    }
+
+    /* Заголовок мобильный
+       Figma: Forum, 32px, line-height: 0.9em, letter-spacing: -3% */
+    .about-hero__title {
+        font-size: 32px;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        margin-bottom: 16px;
+    }
+
+    /* Описание мобильное
+       Figma: Open Sans, 12px, line-height: 1.3em, letter-spacing: -3% */
+    .about-hero__lead {
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+    }
+
+    /* Контейнер кнопок - вертикальное расположение */
+    .about-hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    /* Кнопка мобильная
+       Figma: padding: 8px 20px, gap: 3px, fontSize: 12px */
+    .about-hero__btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .about-hero__btn span:last-child {
+        font-size: 11px;
+    }
+
+    /* Сноски мобильные
+       Figma: 6px, line-height: 1.5em, letter-spacing: -2% */
+    .about-hero__note {
+        font-size: 6px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+    }
+
+    /* Mobile Image - показываем после контента */
+    .about-hero__image-mobile {
+        display: block;
+        margin-top: 20px;
+        margin-left: -24px;
+        margin-right: -24px;
+        order: 2;
+        position: relative;
+        background-color: #1C2472;
+    }
+
+    .about-hero__image-mobile::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg,
+            rgb(28, 36, 114) 0%,
+            rgba(28, 36, 114, 0.5) 10%,
+            rgba(28, 36, 114, 0.2) 20%,
+            rgba(28, 36, 114, 0) 25%,
+            rgba(28, 36, 114, 0) 75%,
+            rgba(28, 36, 114, 0.2) 80%,
+            rgba(28, 36, 114, 0.5) 90%,
+            rgb(28, 36, 114) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .about-hero__image-mobile img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        position: relative;
+        z-index: 0;
+    }
+
+    /* Правая часть - карточки без отступов
+       Figma mobile: x:15, y:20, width:290, height:440 */
+    .about-hero__right {
+        padding: 20px 0;
+        background: #1D2573;
+    }
+
+    /* Карточки сеткой без gaps */
+    .about-hero__right .row {
+        --bs-gutter-x: 4px;
+        --bs-gutter-y: 4px;
+    }
+
+    /* Карточка мобильная
+       Figma: width:143, height:148/136, padding:10px */
+    .clinic-card {
+        min-height: 136px;
+        padding: 10px;
+        border: 1px solid #D2D2D2;
+        border-radius: 0;
+    }
+
+    /* Убираем правую границу у правых карточек */
+    .about-hero__right .col:nth-child(2n) .clinic-card {
+        border-right: 1px solid #D2D2D2;
+    }
+
+    /* Убираем нижнюю границу у последних карточек */
+    .about-hero__right .col:nth-last-child(-n+2) .clinic-card {
+        border-bottom: 1px solid #D2D2D2;
+    }
+
+    /* Заголовок карточки
+       Figma: Forum, 12px, line-height: 1em, letter-spacing: -2% */
+    .clinic-card__title {
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    }
+
+    /* Время и метро
+       Figma: Open Sans, 8px, line-height: 1.3em */
+    .clinic-card__hours,
+    .clinic-card__metro {
+        font-size: 8px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    /* Адрес
+       Figma: Inter, 10px, line-height: 1.3em, letter-spacing: -1% */
+    .clinic-card__address {
+        font-size: 10px;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+
+
+    /* Индикатор метро
+       Figma: 4x4px */
+    .clinic-card__metro::after {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE SMALL (до 576px)
+   ============================================ */
+@media (max-width: 576px) {
+    .about-hero__left {
+        padding: 16px;
+    }
+
+    .about-hero__title {
+        font-size: 28px;
+    }
+
+    /* Mobile Image */
+    .about-hero__image-mobile {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    /* Правая часть - сохраняем структуру Figma */
+    .about-hero__right {
+        padding: 20px 0;
+    }
+
+    .clinic-card {
+        min-height: 136px;
+        padding: 10px;
+    }
+
+    .clinic-card__title {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .clinic-card__hours,
+    .clinic-card__metro {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .clinic-card__address {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE EXTRA SMALL (до 374px)
+   ============================================ */
+@media (max-width: 374px) {
+    .about-hero__left {
+        padding: 16px 0;
+    }
+
+    .about-hero__title {
+        font-size: 26px;
+    }
+
+    .about-hero__lead {
+        font-size: 11px;
+    }
+
+    /* Mobile Image */
+    .about-hero__image-mobile {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    /* Правая часть - уменьшаем отступы */
+    .about-hero__right {
+        padding: 16px 0;
+    }
+
+    .clinic-card {
+        min-height: 130px;
+        padding: 8px;
+    }
+
+    .clinic-card__title {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .clinic-card__hours,
+    .clinic-card__metro {
+        font-size: 7px;
+        margin-bottom: 6px;
+    }
+
+    .clinic-card__address {
+        font-size: 8px;
+    }
+
+    .clinic-card__address span{
+        font-size: 6px;
+    }
+
+    .clinic-card__metro::after {
+        width: 3px;
+        height: 3px;
+    }
+}

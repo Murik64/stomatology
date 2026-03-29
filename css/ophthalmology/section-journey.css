@@ -1,0 +1,178 @@
+/* ============================================
+   ОФТАЛЬМОЛОГИЯ — JOURNEY (Section 9)
+   «Как проходит приём офтальмолога»
+   Figma: placeholder — 4 шага
+   ============================================ */
+
+.ophthalmology-page .ophthalmology-journey {
+    background: var(--color-bg-light);
+    padding: 70px 0;
+}
+
+.ophthalmology-journey__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ophthalmology-journey__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 25px;
+}
+
+.ophthalmology-journey__subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    opacity: 0.9;
+    max-width: 805px;
+    margin: 0 auto;
+}
+
+.ophthalmology-journey__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 34px;
+}
+
+.ophthalmology-journey__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+    padding: 0;
+    font-size: 0;
+    line-height: 1;
+}
+
+.ophthalmology-journey__arrow:hover {
+    background: rgba(32, 32, 32, 0.12);
+}
+
+.ophthalmology-journey__arrow svg {
+    width: 18px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ophthalmology-journey__timeline {
+    position: relative;
+    height: 10px;
+    margin-bottom: 26px;
+}
+
+.ophthalmology-journey__timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-text);
+    transform: translateY(-50%);
+}
+
+.ophthalmology-journey__dots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    height: 10px;
+}
+
+.ophthalmology-journey__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-text);
+    transition: background 0.25s ease;
+}
+
+.ophthalmology-journey__dot.active {
+    background: var(--color-text);
+}
+
+.ophthalmology-journey__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ophthalmology-journey__step {
+    padding: 20px;
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+}
+
+.ophthalmology-journey__step-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 15px;
+}
+
+.ophthalmology-journey__step-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .ophthalmology-journey__steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ophthalmology-journey__dots {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ophthalmology-journey__title {
+        font-size: 36px;
+    }
+
+    .ophthalmology-journey__subtitle {
+        font-size: 16px;
+    }
+
+    .ophthalmology-journey__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .ophthalmology-journey__step-title {
+        font-size: 20px;
+    }
+
+    .ophthalmology-journey__step-text {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,399 @@
+/* ============================================
+   SECTION COMPETENCE - Центры компетенций
+   ============================================ */
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.competence-section {
+    padding: 80px 0 90px;
+}
+
+.competence-section .container-fluid {
+    padding: 0 40px;
+}
+
+.competence-header {
+    text-align: center;
+}
+
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 230px);
+    gap: 20px;
+}
+
+/* Позиционирование карточек в сетке */
+.competence-card-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.competence-card-tall {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.competence-card-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.competence-card-4 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.competence-card-5 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.competence-card-wide-1 {
+    grid-column: 3 / 5;
+    grid-row: 2;
+}
+
+.competence-card-wide-2 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+.competence-card-8 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.competence-card-9 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.competence-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    min-height: 230px;
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.competence-card:focus-visible {
+    outline: 2px solid rgba(28, 36, 114, 0.6);
+    outline-offset: 2px;
+}
+
+.competence-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(32, 32, 32, 0.12);
+}
+
+.competence-card--dark {
+    background: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
+}
+
+a.competence-card:hover {
+    color: var(--color-white);
+}
+
+.competence-card--dark:hover {
+    background: #313EC3;
+}
+
+.competence-card--image {
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    --competence-gradient: linear-gradient(180deg, rgba(28, 36, 114, 0) 35%, rgba(28, 36, 114, 0.88) 100%);
+    --competence-gradient-hover: linear-gradient(180deg, rgba(49, 62, 195, 0) 10%, rgba(49, 62, 195, 0.98) 100%);
+}
+
+.competence-card--image::before,
+.competence-card--image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+}
+
+.competence-card--image::before {
+    background: var(--competence-gradient);
+    opacity: 0.95;
+}
+
+.competence-card--image::after {
+    background: var(--competence-gradient-hover);
+    opacity: 0;
+}
+
+.competence-card--image:hover::before,
+.competence-card--image:focus-visible::before {
+    opacity: 0;
+}
+
+.competence-card--image:hover::after,
+.competence-card--image:focus-visible::after {
+    opacity: 1;
+}
+
+.competence-card--left-gradient {
+    --competence-gradient: linear-gradient(90deg, rgba(28, 36, 114, 0.92) 0%, rgba(28, 36, 114, 0) 62%);
+    --competence-gradient-hover: linear-gradient(90deg, rgba(49, 62, 195, 1) 0%, rgba(49, 62, 195, 0) 62%);
+}
+
+.competence-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+.competence-card .card-arrow {
+    color: currentColor;
+}
+
+/* Изображения */
+.competence-plastic {
+    background-image: url('../assets/images/competence-plastic.png');
+}
+
+.competence-pediatrics {
+    background-image: url('../assets/images/competence-pediatrics.png');
+}
+
+.competence-ophthalmology {
+    background-image: url('../assets/images/competence-ophthalmology.png');
+}
+
+.competence-neurology {
+    background-image: url('../assets/images/competence-neurology.png');
+    background-color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .competence-card--image::before {
+        animation: competenceGlow 7s ease-in-out infinite;
+    }
+}
+
+@keyframes competenceGlow {
+    0%,
+    100% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .competence-grid {
+        grid-template-rows: repeat(3, 280px);
+        gap: 24px;
+    }
+
+    .competence-card {
+        min-height: 280px;
+        padding: 30px;
+    }
+
+    .competence-title {
+        font-size: 28px;
+        max-width: 300px;
+    }
+
+    .competence-card .card-arrow {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .competence-grid {
+        grid-template-rows: repeat(3, 320px);
+        gap: 28px;
+    }
+
+    .competence-card {
+        min-height: 320px;
+        padding: 34px;
+    }
+
+    .competence-title {
+        font-size: 32px;
+        max-width: 340px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - 1200px
+   ============================================ */
+@media (max-width: 1200px) {
+    .competence-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(4, 220px);
+    }
+
+    .competence-card-tall {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .competence-card-3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .competence-card-4 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .competence-card-5 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .competence-card-wide-1 {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .competence-card-8 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .competence-card-wide-2 {
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+
+    .competence-card-9 {
+        grid-column: 3;
+        grid-row: 4;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .competence-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .competence-card {
+        min-height: 220px;
+    }
+
+    .competence-card-tall {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 240px;
+    }
+
+    .competence-card-wide-1,
+    .competence-card-wide-2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .competence-section {
+        padding: 50px 0;
+    }
+
+    .competence-section .container-fluid {
+        padding: 0 15px;
+    }
+
+    .competence-header {
+        text-align: left;
+    }
+
+    .competence-section .section-header {
+        margin-bottom: 20px;
+    }
+
+    .competence-section .section-title {
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+    }
+
+    .competence-section .section-subtitle {
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: rgba(32, 32, 32, 0.9);
+        margin: 0;
+    }
+
+    .competence-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .competence-card-1,
+    .competence-card-tall,
+    .competence-card-3,
+    .competence-card-4,
+    .competence-card-5,
+    .competence-card-wide-1,
+    .competence-card-wide-2,
+    .competence-card-8,
+    .competence-card-9 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .competence-card {
+        min-height: 110px;
+        padding: 15px;
+    }
+
+    .competence-card--image,
+    .competence-card-tall {
+        min-height: 220px;
+    }
+
+    .competence-card--dark {
+        border-color: #D2D2D2;
+    }
+
+    .competence-card--image {
+        --competence-gradient: linear-gradient(178deg, rgba(28, 36, 114, 0) 31%, rgba(28, 36, 114, 1) 97%);
+        --competence-gradient-hover: linear-gradient(178deg, rgba(49, 62, 195, 0) 24%, rgba(49, 62, 195, 1) 97%);
+    }
+
+    .competence-title {
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        max-width: 250px;
+    }
+
+    .competence-card .card-arrow {
+        top: 5px;
+        right: 10px;
+        font-size: 15px;
+    }
+}

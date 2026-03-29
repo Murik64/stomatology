@@ -1,0 +1,212 @@
+/* ============================================
+   ОФТАЛЬМОЛОГИЯ — TECHNOLOGIES SLIDER
+   «Технологии и возможности центра»
+   Figma node: 1362:6063
+   ============================================ */
+
+.ophthalmology-technologies {
+    padding: 70px 0 66px;
+}
+
+.ophthalmology-technologies .section-header {
+    margin-bottom: 30px;
+}
+
+.ophthalmology-technologies .section-subtitle {
+    opacity: 0.9;
+}
+
+/* Slider wrapper */
+.ophthalmology-technologies__slider {
+    position: relative;
+}
+
+/* Slide */
+.ophthalmology-technologies__slide {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1359 / 659;
+    overflow: hidden;
+    background: #f5f6f8;
+}
+
+.ophthalmology-technologies__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Play button */
+.ophthalmology-technologies__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+.ophthalmology-technologies__play:hover {
+    opacity: 0.8;
+}
+
+.ophthalmology-technologies__play svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Arrows */
+.ophthalmology-technologies__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    z-index: 2;
+}
+
+.ophthalmology-technologies__arrow:hover {
+    background: rgba(32, 32, 32, 0.12);
+}
+
+.ophthalmology-technologies__arrow svg {
+    width: 18px;
+    height: 15px;
+}
+
+.ophthalmology-technologies__arrow--left {
+    left: 20px;
+}
+
+.ophthalmology-technologies__arrow--right {
+    right: 20px;
+}
+
+/* Dots */
+.ophthalmology-technologies__dots {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 26px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.ophthalmology-technologies__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #9e9e9e;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.ophthalmology-technologies__dot.active {
+    background: #9e9e9e;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 992px) {
+    .ophthalmology-technologies {
+        padding: 50px 0;
+    }
+
+    .ophthalmology-technologies__play {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ophthalmology-technologies__arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ophthalmology-technologies__arrow svg {
+        width: 14px;
+        height: 12px;
+    }
+
+    .ophthalmology-technologies__arrow--left {
+        left: 12px;
+    }
+
+    .ophthalmology-technologies__arrow--right {
+        right: 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .ophthalmology-technologies {
+        padding: 50px 0 30px;
+    }
+
+    .ophthalmology-technologies .section-header {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .ophthalmology-technologies .section-title {
+        font-size: 28px;
+        line-height: 0.9;
+    }
+
+    .ophthalmology-technologies .section-subtitle {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .ophthalmology-technologies__slide {
+        aspect-ratio: 1 / 1;
+    }
+
+    .ophthalmology-technologies__play {
+        width: 90px;
+        height: 90px;
+    }
+
+    .ophthalmology-technologies__arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ophthalmology-technologies__arrow svg {
+        width: 14px;
+        height: 12px;
+    }
+
+    .ophthalmology-technologies__arrow--left {
+        left: 15px;
+    }
+
+    .ophthalmology-technologies__arrow--right {
+        right: 15px;
+    }
+
+    .ophthalmology-technologies__dots {
+        bottom: 10px;
+    }
+}
