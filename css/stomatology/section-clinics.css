@@ -6,14 +6,16 @@
    DESKTOP
    ============================================ */
 .clinics-section {
-    padding: 40px 0;
+    padding: 70px 0 40px 0;
     background: var(--color-white);
 }
 
 .clinics-section .section-header {
     margin-bottom: 40px;
 }
-
+.container-fluid{
+    padding: 40px 0 0 0;
+}
 .map-container {
     position: relative;
     overflow: hidden;
