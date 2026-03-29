@@ -1,0 +1,277 @@
+/* ============================================
+   SECTION: REVIEWS LIST — "Отзывы пациентов"
+   ============================================ */
+
+.doctor-reviews {
+    background: #fff;
+    padding: 70px 0;
+}
+
+.doctor-reviews .doctor-section-head {
+    width: 100%;
+    max-width: 591px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+.doctor-reviews .doctor-section-head .section-title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    line-height: 57.2px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: #202020;
+    margin-bottom: 20px;
+}
+
+.doctor-reviews .doctor-section-head .section-subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: rgba(32, 32, 32, 0.9);
+    max-width: 591px;
+}
+
+.doctor-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.doctor-review-card {
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    min-height: 245px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-review-card .date {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 10.8px;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.5);
+}
+
+.doctor-review-card h3 {
+    margin: 20px 0 15px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
+.doctor-review-card h3 a {
+    color: #202020;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.doctor-review-card p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: #202020;
+    flex: 1;
+}
+
+.doctor-review-card__footer {
+    margin-top: auto;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.doctor-review-card .author {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.5);
+}
+
+.doctor-review-card__more {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: #202020;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.doctor-review-card__more span {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    line-height: 15.6px;
+    font-weight: 300;
+}
+
+/* --- Navigation Arrows (mobile only) --- */
+
+.doctor-reviews-arrows {
+    display: none;
+}
+
+.doctor-reviews-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #202020;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1;
+    color: #202020;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1199px) {
+    .doctor-reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .doctor-reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctor-reviews {
+        padding: 56px 0;
+    }
+
+    .doctor-reviews .doctor-section-head {
+        margin-bottom: 24px;
+    }
+
+    .doctor-reviews .doctor-section-head .section-title {
+        font-size: 42px;
+        margin-bottom: 14px;
+    }
+
+    .doctor-reviews .doctor-section-head .section-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctor-reviews {
+        padding: 50px 0;
+    }
+
+    .doctor-reviews .doctor-section-head {
+        max-width: none;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .doctor-reviews .doctor-section-head .section-title {
+        font-size: 28px;
+        line-height: 30.8px;
+        letter-spacing: -0.02em;
+        margin-bottom: 15px;
+    }
+
+    .doctor-reviews .doctor-section-head .section-subtitle {
+        font-size: 14px;
+        line-height: 18.2px;
+        letter-spacing: -0.02em;
+        max-width: none;
+    }
+
+    .doctor-reviews-arrows {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .doctor-reviews-grid {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        max-width: none;
+    }
+
+    .doctor-reviews-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .doctor-review-card {
+        flex: 0 0 220px;
+        min-height: 248px;
+        padding: 15px;
+        scroll-snap-align: start;
+    }
+
+    .doctor-review-card .date {
+        font-size: 10px;
+        line-height: 9px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-review-card h3 {
+        font-size: 16px;
+        line-height: 20.8px;
+        letter-spacing: -0.02em;
+        margin: 20px 0 10px;
+    }
+
+    .doctor-review-card p {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-review-card .author {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-review-card__more {
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+    }
+
+    .doctor-review-card__more span {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .doctor-review-card__footer {
+        padding-top: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

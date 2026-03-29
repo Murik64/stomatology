@@ -3,7 +3,7 @@
 @import url('../header.css');
 @import url('../footer.css');
 @import url('../section-reviews.css');
-@import url('../section-clinics.css');
+@import url('section-clinics.css');
 @import url('section-offers.css');
 @import url('section-hero.css');
 @import url('section-feature.css');

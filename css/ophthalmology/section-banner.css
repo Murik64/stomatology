@@ -1,0 +1,136 @@
+/* ============================================
+   ОФТАЛЬМОЛОГИЯ — BANNER (Section 3 / 7)
+   «Имиджевый баннер»
+   Figma: placeholder — акцент #2E57CB
+   ============================================ */
+
+.ophthalmology-banner {
+    padding: 0;
+    background: var(--color-bg-light);
+}
+
+.ophthalmology-banner__inner {
+    min-height: clamp(300px, 34.7vw, 500px);
+    z-index: 0;
+}
+
+.ophthalmology-banner__inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(179.72deg, rgba(46, 87, 203, 0) 30.94%, rgba(46, 87, 203, 0.4) 96.32%);
+}
+
+.ophthalmology-banner__bg {
+    z-index: 0;
+}
+
+.ophthalmology-banner__content {
+    z-index: 1;
+    padding: 40px 20px;
+}
+
+.ophthalmology-banner__logo {
+    width: clamp(160px, 18vw, 262px);
+    height: auto;
+}
+
+.ophthalmology-banner__quote {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: #fff;
+    border: none;
+    padding: 0;
+    max-width: 800px;
+}
+
+@media (min-width: 1920px) {
+    .ophthalmology-banner__inner {
+        min-height: 500px;
+        max-width: 1840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ophthalmology-banner__quote {
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .ophthalmology-banner__quote {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ophthalmology-banner__inner {
+        min-height: clamp(280px, 32vw, 420px);
+    }
+
+    .ophthalmology-banner__quote {
+        font-size: 40px;
+        max-width: 660px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ophthalmology-banner__inner {
+        min-height: clamp(260px, 36vw, 380px);
+    }
+
+    .ophthalmology-banner__quote {
+        font-size: 34px;
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ophthalmology-banner > .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .ophthalmology-banner__inner {
+        min-height: clamp(420px, 130vw, 500px);
+    }
+
+    .ophthalmology-banner__inner::before {
+        background: linear-gradient(179.72deg, rgba(46, 87, 203, 0) 30.94%, rgba(46, 87, 203, 0.4) 96.32%);
+    }
+
+    .ophthalmology-banner__content {
+        padding: 30px 16px;
+    }
+
+    .ophthalmology-banner__logo {
+        width: 168px;
+        margin-bottom: 35px !important;
+    }
+
+    .ophthalmology-banner__quote {
+        font-size: 28px;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 374px) {
+    .ophthalmology-banner__inner {
+        min-height: 460px;
+    }
+
+    .ophthalmology-banner__logo {
+        width: 150px;
+    }
+
+    .ophthalmology-banner__quote {
+        font-size: 28px;
+        max-width: 100%;
+    }
+}

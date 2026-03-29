@@ -3,7 +3,7 @@
    ============================================ */
 
 .directions-section {
-    padding: 80px 0 90px;
+    padding: 70px 0 ;
     background: var(--color-bg-light);
 }
 
@@ -323,5 +323,9 @@
 
     .direction-text {
         font-size: 13px;
+    }
+    .program-doctors__action{
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 }

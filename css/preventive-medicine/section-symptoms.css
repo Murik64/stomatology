@@ -1,0 +1,351 @@
+/* ============================================
+   PREVENTIVE MEDICINE — SYMPTOMS (Section 6)
+   «Когда стоит обратиться к врачу»
+   Figma node: 1634:4486 (1440×531)
+   Section bg: #FFFFFF
+   Layout: text+tags LEFT, image RIGHT (top-aligned)
+   ============================================ */
+
+.preventive-page .preventive-symptoms {
+    background: var(--color-bg-white);
+    padding: 75px 0 52px;
+}
+
+/* ---- Layout: content left + image right ----
+   Figma: content from x=40, image at x=960 (440px wide)
+   Gap: 960 - (~900 content) ≈ 60px */
+.preventive-symptoms__layout {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 60px;
+    align-items: start;
+}
+
+/* ---- Left column: title + subtitle + tags ---- */
+.preventive-symptoms__content {
+    min-width: 0;
+}
+
+/* ---- Title ----
+   Figma 1634:4487: Forum 52px, lh 46.8px (90%), ls -1.04px
+   Color: #202020, bbox 719×94
+   Gap to subtitle: 25px */
+.preventive-symptoms__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 25px;
+    max-width: 720px;
+}
+
+/* ---- Subtitle ----
+   Figma: Open Sans 18px, lh 23.4px (130%), ls -0.36px
+   Color: #202020 opacity 0.9, bbox 858×46 */
+.preventive-symptoms__subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    opacity: 0.9;
+    max-width: 858px;
+    margin: 0;
+}
+
+/* ---- Image (right column) ----
+   Figma: (960,75) 440×404, top-aligned with title */
+.preventive-symptoms__visual {
+    overflow: hidden;
+    position: relative;
+}
+
+.preventive-symptoms__visual::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 870px;
+    top: -150px;
+    left: 0; 
+    opacity: 1;
+    background: linear-gradient(179.72deg, rgba(22, 117, 133, 0) 30.94%, #167585 96.32%);
+}
+
+.preventive-symptoms__visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 440 / 404;
+}
+
+/* ---- Tags / chips ----
+   Figma: inside left column, area (38,340) 878×139
+   Gap from subtitle bottom (y=240) to tags (y=340) = 100px
+   flex-wrap, gap rows 11px, gap items ~15px */
+.preventive-symptoms__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px 15px;
+    margin-top: 100px;
+    max-width: 878px;
+}
+
+/* ---- Tag chip ----
+   Figma: h=39, bg #FFF, stroke 1px rgba(32,32,32,0.2)
+   Open Sans 16px, lh 20.8px, ls 0, color #202020 */
+.preventive-symptoms__tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    padding: 0 20px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: var(--color-text);
+    background: var(--color-bg-white);
+    border: 1px solid rgba(32, 32, 32, 0.2);
+    cursor: default;
+    transition: background 0.25s ease;
+}
+
+.preventive-symptoms__tag:hover {
+    background: var(--color-bg-light);
+}
+
+/* ============================================
+   RESPONSIVE — LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .preventive-page .preventive-symptoms {
+        padding: 88px 0 60px;
+    }
+
+    .preventive-symptoms__layout {
+        max-width: 1840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 58px;
+        max-width: 800px;
+    }
+
+    .preventive-symptoms__subtitle {
+        font-size: 20px;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 17px;
+        height: 42px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — DESKTOP (до 1400px)
+   ============================================ */
+@media (max-width: 1400px) {
+    .preventive-page .preventive-symptoms {
+        padding: 60px 0 48px;
+    }
+
+    .preventive-symptoms__layout {
+        grid-template-columns: 1fr 380px;
+        gap: 40px;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 46px;
+    }
+
+    .preventive-symptoms__subtitle {
+        font-size: 17px;
+    }
+
+    .preventive-symptoms__tags {
+        margin-top: 70px;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 15px;
+        height: 36px;
+        padding: 0 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MEDIUM DESKTOP (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .preventive-page .preventive-symptoms {
+        padding: 56px 0 44px;
+    }
+
+    .preventive-symptoms__layout {
+        grid-template-columns: 1fr 320px;
+        gap: 30px;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 40px;
+    }
+
+    .preventive-symptoms__subtitle {
+        font-size: 16px;
+    }
+
+    .preventive-symptoms__tags {
+        margin-top: 50px;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 14px;
+        height: 34px;
+        padding: 0 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (до 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .preventive-page .preventive-symptoms {
+        padding: 50px 0 40px;
+    }
+
+    .preventive-symptoms__layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .preventive-symptoms__visual {
+        order: -1;
+        max-width: 440px;
+    }
+
+    .preventive-symptoms__visual img {
+        aspect-ratio: 440 / 300;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 36px;
+    }
+
+    .preventive-symptoms__tags {
+        margin-top: 30px;
+        max-width: none;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 14px;
+        height: 34px;
+        padding: 0 14px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   Figma 1810:133 — 320×807
+   Tags: 10px, h27, opaque border, gap 5/8
+   Image: below content (not order -1), 1:1 square
+   ============================================ */
+@media (max-width: 768px) {
+    .preventive-symptoms__layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    .preventive-page .preventive-symptoms {
+        padding: 50px 0 40px;
+    }
+
+    .preventive-page .preventive-symptoms > .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 28px;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        margin-bottom: 15px;
+    }
+
+    .preventive-symptoms__subtitle {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .preventive-symptoms__visual {
+        order: 0;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .preventive-symptoms__visual img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .preventive-symptoms__tags {
+        margin-top: 20px;
+        gap: 5px 8px;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 10px;
+        line-height: 1.3;
+        height: 27px;
+        padding: 0 10px;
+        border: 1px solid #20202033 }
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE (до 576px)
+   ============================================ */
+@media (max-width: 576px) {
+    .preventive-page .preventive-symptoms {
+        padding: 45px 0 35px;
+    }
+
+    .preventive-symptoms__visual::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        width: 100%;
+        min-height: 870px;
+        top: -250px;
+        left: 0; 
+        opacity: 1;
+        background: linear-gradient(179.72deg, rgba(22, 117, 133, 0) 30.94%, #167585 96.32%);
+    }
+}
+
+/* ============================================
+   RESPONSIVE — EXTRA SMALL (до 374px)
+   ============================================ */
+@media (max-width: 374px) {
+    .preventive-page .preventive-symptoms {
+        padding: 40px 0 30px;
+    }
+
+    .preventive-symptoms__title {
+        font-size: 26px;
+    }
+
+    .preventive-symptoms__tag {
+        font-size: 10px;
+        height: 26px;
+        padding: 0 8px;
+    }
+}

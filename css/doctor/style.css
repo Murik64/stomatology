@@ -1,0 +1,136 @@
+/* ============================================
+   СТРАНИЦА ВРАЧА - MAIN STYLES
+   Главный файл стилей страницы врача
+   ============================================ */
+
+@import url('../base.css');
+@import url('../components.css');
+@import url('../header.css');
+@import url('../footer.css');
+
+@import url('section-profile.css');
+@import url('section-appointment.css');
+@import url('section-reviews.css');
+@import url('section-review-form.css');
+@import url('section-specialists.css');
+
+.doctor-page {
+    background: var(--color-bg-cream);
+    color: var(--color-text);
+    --doctor-section-space: clamp(38px, 4.9vw, 70px);
+    --doctor-heading-size: clamp(28px, 3.6vw, 52px);
+    --doctor-subtitle-size: clamp(14px, 1.25vw, 18px);
+    --doctor-sidebar-width: clamp(280px, 22vw, 325px);
+    --doctor-sidebar-photo-height: clamp(325px, 25vw, 380px);
+    --doctor-label-column: clamp(220px, 24vw, 345px);
+    --doctor-card-photo-height: clamp(165px, 20vw, 300px);
+    --doctor-review-card-min-height: clamp(245px, 18vw, 290px);
+}
+
+.doctor-main section {
+    padding: var(--doctor-section-space) 0;
+}
+
+.doctor-section-head {
+    margin-bottom: clamp(20px, 2vw, 30px);
+}
+
+.doctor-section-head .section-title,
+.doctor-section-head .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-profile__layout {
+    grid-template-columns: var(--doctor-sidebar-width) minmax(0, 1fr);
+    gap: 0 clamp(16px, 1.4vw, 20px);
+}
+
+.doctor-sidebar__photo img {
+    height: var(--doctor-sidebar-photo-height);
+}
+
+.doctor-name,
+.doctor-section-head .section-title {
+    font-size: var(--doctor-heading-size);
+}
+
+.doctor-name {
+    line-height: 0.96;
+}
+
+.doctor-section-head .section-title {
+    line-height: 1.05;
+}
+
+.doctor-role,
+.doctor-section-head .section-subtitle {
+    font-size: var(--doctor-subtitle-size);
+    line-height: 1.3;
+}
+
+.doctor-role {
+    max-width: clamp(520px, 48vw, 669px);
+}
+
+.doctor-info-row {
+    grid-template-columns: var(--doctor-label-column) var(--doctor-label-column) minmax(0, 1fr);
+    gap: 0 clamp(16px, 1.4vw, 24px);
+}
+
+.doctor-detail-row {
+    grid-template-columns: var(--doctor-label-column) minmax(0, 1fr);
+    gap: 0 clamp(16px, 1.4vw, 24px);
+}
+
+.doctor-section-head--appointment,
+.doctor-reviews .doctor-section-head {
+    width: min(100%, clamp(420px, 42vw, 591px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-section-head--review {
+    width: min(100%, clamp(420px, 39vw, 547px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-section-head--specialists {
+    width: min(100%, clamp(480px, 58vw, 825px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-mini-card__photo {
+    height: var(--doctor-card-photo-height);
+}
+
+.doctor-review-card {
+    min-height: var(--doctor-review-card-min-height);
+}
+
+@media (max-width: 991px) {
+    .doctor-profile__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-info-row,
+    .doctor-detail-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctor-main .doctor-section-head--appointment,
+    .doctor-main .doctor-section-head--review,
+    .doctor-main .doctor-section-head--specialists,
+    .doctor-main .doctor-reviews .doctor-section-head {
+        width: 100%;
+    }
+
+    .doctor-role {
+        max-width: none;
+    }
+}

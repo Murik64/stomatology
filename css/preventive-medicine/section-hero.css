@@ -1,0 +1,451 @@
+/* ============================================
+   PREVENTIVE MEDICINE — HERO (Section 1)
+   Figma Desktop: node 1634:3962 (1440×745)
+   Teal: rgb(0, 104, 122) = #00687A
+   ============================================ */
+
+/* Left gradient — 55% width, backdrop-blur
+   Figma 1634:3969: rotated 90°, 794px wide,
+   rgba(0,104,122) from 0.9 → 0, blur 10px */
+.preventive-hero__surface::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 55%;
+    z-index: 1;
+    background: linear-gradient(
+        to right,
+        rgba(0, 104, 122, 0.9) 5%,
+        rgba(0, 104, 122, 0.7) 35%,
+        rgba(0, 104, 122, 0.35) 65%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* Bottom gradient — full width
+   Figma 1634:3970: top-to-bottom,
+   rgba(0,104,122) from 0 → 0.8 at 95% */
+.preventive-hero__surface::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        transparent 31%,
+        rgba(0, 104, 122, 0.45) 65%,
+        rgba(0, 104, 122, 0.8) 95%
+    );
+    pointer-events: none;
+}
+
+.preventive-hero__bg {
+    display: none;
+}
+
+/* ---- Body ---- */
+.preventive-hero__body {
+    z-index: 2;
+    min-height: clamp(520px, 51.7vw, 745px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---- Logo ----
+   Figma 1718:12308: 262×70, position x=40 y=40 */
+.preventive-hero__logo img {
+    width: clamp(160px, 18vw, 262px);
+    height: auto;
+}
+
+/* ---- Content block ----
+   Figma: x=40, bottom-offset=40, chips-width=847 */
+.preventive-hero__content {
+    max-width: 1200px;
+}
+
+/* ---- Title ----
+   Figma 1634:3972: Forum 52px, lh 52px, ls -1.04px
+   bbox 699×156 */
+.preventive-hero__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+/* ---- Lead ----
+   Figma 1634:3973: Open Sans 18px, lh 27px, ls -0.36px
+   bbox 593×54 */
+.preventive-hero__lead {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    opacity: 0.9;
+    max-width: 593px;
+    margin-bottom: 20px;
+}
+
+/* ---- Tags / Chips ----
+   Figma 1634:3975: 16px, h=39, pad 9px 20px
+   fill rgba(255,255,255,0.1), stroke rgba(255,255,255,0.2) 1px
+   container gap: h≈15px v≈12px */
+.preventive-hero__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 15px;
+}
+
+.preventive-hero__tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    padding: 0 20px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.25s ease;
+    cursor: default;
+}
+
+.preventive-hero__tag:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.preventive-hero__actions {
+    display: none;
+}
+
+.preventive-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 39px;
+    padding: 9px 20px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.preventive-hero__btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+}
+
+.preventive-hero__btn-arrow {
+    font-family: var(--font-ui);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* ============================================
+   RESPONSIVE — LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .preventive-hero__body {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 745px;
+    }
+
+    .preventive-hero__title {
+        font-size: 58px;
+        max-width: 780px;
+    }
+
+    .preventive-hero__lead {
+        font-size: 20px;
+        max-width: 660px;
+    }
+
+    .preventive-hero__tag {
+        font-size: 17px;
+        height: 42px;
+        padding: 0 22px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — DESKTOP (до 1400px)
+   ============================================ */
+@media (max-width: 1400px) {
+    .preventive-hero__title {
+        font-size: 46px;
+        max-width: 640px;
+    }
+
+    .preventive-hero__lead {
+        font-size: 17px;
+    }
+
+    .preventive-hero__content {
+        max-width: 900px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MEDIUM DESKTOP (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .preventive-hero__body {
+        min-height: clamp(480px, 48vw, 620px);
+    }
+
+    .preventive-hero__title {
+        font-size: 40px;
+        max-width: 560px;
+    }
+
+    .preventive-hero__lead {
+        font-size: 16px;
+        max-width: 520px;
+    }
+
+    .preventive-hero__content {
+        max-width: 900px;
+    }
+
+    .preventive-hero__tag {
+        font-size: 15px;
+        height: 36px;
+        padding: 0 18px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (до 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .preventive-hero__body {
+        min-height: clamp(420px, 52vw, 560px);
+    }
+
+    .preventive-hero__surface::before {
+        width: 70%;
+    }
+
+    .preventive-hero__title {
+        font-size: 36px;
+        max-width: 480px;
+    }
+
+    .preventive-hero__lead {
+        font-size: 15px;
+        max-width: 460px;
+    }
+
+    .preventive-hero__content {
+        max-width: 900px;
+    }
+
+    .preventive-hero__tag {
+        font-size: 14px;
+        height: 34px;
+        padding: 0 16px;
+    }
+
+    .preventive-hero__tags {
+        gap: 10px 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   Figma mobile: node 1810:221 (320×544)
+   Паттерн как в yoga hero: контент вверху,
+   фото просвечивает снизу, gradient top→bottom.
+   ============================================ */
+@media (max-width: 768px) {
+    .preventive-hero {
+        background: none;
+    }
+
+    .preventive-hero::before,
+    .preventive-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .preventive-hero::before { 
+    }
+
+    .preventive-hero::after {
+        background: linear-gradient(180.16deg, #167585 42.09%, rgba(22, 117, 133, 0) 57.23%, rgba(22, 117, 133, 0.9) 93.33%);
+
+    }
+
+    .preventive-hero__surface {
+        display: none;
+    }
+
+    .preventive-hero__bg {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        z-index: 0;
+        background-image: url("../../assets/images/preventive-medicine/hero_bg_mob.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+
+    .preventive-hero,
+    .preventive-hero__body {
+        min-height: 544px;
+    }
+
+    .preventive-hero__body {
+        justify-content: flex-start;
+        padding: 39px 15px 24px;
+    }
+ 
+
+    .preventive-hero__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        max-width: 290px;
+        padding-bottom: 0;
+    }
+
+    .preventive-hero__title {
+        max-width: 290px;
+        font-size: 32px;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        margin-bottom: 16px;
+    }
+
+    .preventive-hero__lead {
+        max-width: 281px;
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        margin-bottom: 0;
+    }
+
+    .preventive-hero__tags {
+        margin-top: auto;
+    }
+
+    .preventive-hero__tag {
+        font-size: 10px;
+        height: 34px;
+        padding: 0 7px;
+    }
+
+    .preventive-hero__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .preventive-hero__btn {
+        min-height: 32px;
+        padding: 6px 18px;
+        font-size: 12px;
+    }
+
+    .preventive-hero__btn--programs {
+        width: 188px;
+    }
+
+    .preventive-hero__btn--consultation {
+        width: 234px;
+    }
+
+    .preventive-hero__btn-arrow {
+        font-size: 11px;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .preventive-hero__tag {
+        font-size: 8px;
+        height: 20px;
+        padding: 0 5px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — EXTRA SMALL (до 374px)
+   ============================================ */
+@media (max-width: 374px) {
+    .preventive-hero,
+    .preventive-hero__body {
+        min-height: 544px;
+    }
+
+    .preventive-hero__body {
+        padding: 15px 12px 20px;
+    }
+
+    .preventive-hero__logo img {
+        width: 110px;
+    }
+
+    .preventive-hero__title {
+        font-size: 28px;
+        max-width: 260px;
+    }
+
+    .preventive-hero__lead {
+        font-size: 11px;
+        max-width: 250px;
+    }
+ 
+
+    .preventive-hero__btn {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .preventive-hero__btn--programs {
+        width: 178px;
+    }
+
+    .preventive-hero__btn--consultation {
+        width: 216px;
+    }
+
+    .preventive-hero__tag {
+        font-size: 8px;
+        height: 20px;
+        padding: 0 5px;
+    }
+
+    
+}

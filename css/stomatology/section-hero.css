@@ -22,7 +22,7 @@
   bottom: 0;
   background-image: url('../../assets/images/stomatology/hero-slider_1.png');
   background-size: cover;
-  background-position: right center;
+  background-position: right;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -704,6 +704,7 @@
     left: 0;
     z-index: 10;
   }
+
   .hero-image-mobile {
     margin-top: 0;
   }
@@ -712,7 +713,7 @@
     height: 35px;
   }
   .hero-content {
-    min-height: 280px;
+    min-height: 180px;
     bottom: auto;
   }
   .stomatology-hero__controls{

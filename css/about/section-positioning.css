@@ -1,0 +1,119 @@
+/* ============================================
+   ABOUT - POSITIONING (Section 4)
+   Figma: node-id=684-420 (desktop), node-id=704-1598 (mobile)
+   Bootstrap 5: container-fluid px-4, col-12 col-lg-6
+   ============================================ */
+
+.about-positioning {
+    background: #FFFFFF;
+}
+
+/* Заголовок */
+.about-positioning__title {
+    font-family: var(--font-heading, 'Forum', serif);
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: #202020;
+    margin: 0 0 25px 0;
+}
+
+/* Текст */
+.about-positioning__text {
+    font-family: var(--font-body, 'Open Sans', sans-serif);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: rgba(32, 32, 32, 0.9);
+}
+
+.about-positioning__text p {
+    margin: 0;
+}
+
+.about-positioning__text p + p {
+    margin-top: 24px;
+}
+
+/* Изображение */
+.about-positioning__photo {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.py-7{
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.py-6-custom{
+    padding-top: 4.4.rem !important;
+    padding-bottom: 4.4rem !important;
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .about-positioning__title {
+        font-size: 62px;
+    }
+
+    .about-positioning__text {
+        font-size: 20px;
+    }
+
+    .about-positioning__photo {
+        max-height: 500px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1199.98px) {
+    .about-positioning__title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-positioning__title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-positioning__text {
+        font-size: 16px;
+    }
+
+    .about-positioning__photo {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-positioning__title {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .about-positioning__text {
+        font-size: 14px;
+    }
+
+    .about-positioning__text p + p {
+        margin-top: 18px;
+    }
+
+    .about-positioning__photo {
+        max-height: 200px;
+        width: 100%;
+    }
+}

@@ -1,5 +1,6 @@
 .accordion{
   padding-top: 0px;
+  padding-bottom: 40px;
 }
 .accordions-container {
   display: flex;
@@ -10,8 +11,8 @@
 .accordion-item {
   flex: 1;
   /* Принудительно задаем только верхнюю и нижнюю линии */
-  border-top: 1px solid #d1d1d1 !important;
-  border-bottom: 1px solid #d1d1d1 !important;
+  border-top: 1px solid #bcbcbc !important;
+  border-bottom: 1px solid #bcbcbc !important;
 
   /* Жестко убиваем боковые рамки и скругления, которые ломают вид */
   border-left: none !important;
@@ -35,8 +36,8 @@
 }
 
 .accordion-icon {
-  font-size: 20px;
-  color: #888888; /* На макете плюс выглядит чуть светлее/тоньше */
+  font-size: 30px;
+  color: #202020; /* На макете плюс выглядит чуть светлее/тоньше */
   font-weight: 300;
   line-height: 1;
 }
@@ -79,7 +80,10 @@
   }
 
   .accordion-icon {
-    font-size: 18px;
+    font-size: 30px;
+    color: #202020; /* На макете плюс выглядит чуть светлее/тоньше */
+    font-weight: 300;
+    line-height: 1;
   }
 }
 
@@ -90,5 +94,8 @@
 
   .accordion-title {
     font-size: 14px;
+  }
+  .accordion{
+    padding-bottom: 30px;
   }
 }

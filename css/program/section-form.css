@@ -1,0 +1,412 @@
+/* ============================================
+   PROGRAM PAGE — ГОТОВЫ НАЧАТЬ? (Section 6)
+   Figma node: 1467:647 (1440×731)
+   BG: #ffffff
+   Layout: Bootstrap row > col-lg-6 + col-lg-6
+   Left: image + teal gradient   Right: title + form
+   ============================================ */
+
+.program-form {
+    background: var(--color-bg-white);
+    padding: 70px 0;
+}
+
+/* ---- Visual (left image) ----
+   Figma: 670×584, with teal gradient overlay at bottom */
+.program-form__visual {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg-light);
+}
+
+.program-form__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 670 / 584;
+}
+
+.program-form__visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 117, 133, 0) 0%,
+        rgba(22, 117, 133, 0.40) 95%
+    );
+    pointer-events: none;
+}
+
+/* ---- Title ----
+   Figma: Forum 52px, lh=57.2 (1.1), ls=-0.52 (-0.01em) */
+.program-form__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    margin: 0 0 9px;
+}
+
+/* Figma: Open Sans 18px, lh=23.4 (1.3), ls=-0.36, opacity=0.9
+   max-width=547px */
+.program-form__subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 0 0 20px;
+    max-width: 547px;
+}
+
+/* ---- Form ---- */
+.program-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Figma: 670×44, white fill, 1px #D2D2D2 border, no radius
+   Text: Open Sans 14px, placeholder opacity 0.5, padding-left ~20px */
+.program-form__input {
+    width: 100%;
+    height: 44px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-text);
+    background: var(--color-bg-white);
+    border: 1px solid #d2d2d2;
+    border-radius: 0;
+    padding: 0 20px;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.program-form__input::placeholder {
+    color: var(--color-text);
+    opacity: 0.5;
+}
+
+.program-form__input:focus {
+    border-color: var(--color-text);
+}
+
+/* Figma: textarea 670×110 */
+.program-form__input--textarea {
+    height: 110px;
+    padding: 14px 20px;
+    resize: none;
+}
+
+/* ---- Captcha row ----
+   Figma: input 330px + display 330px, side by side */
+.program-form__captcha-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.program-form__input--captcha {
+    flex: 1;
+}
+
+.program-form__captcha-display {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 38px;
+    align-items: center;
+    border: 1px solid #d2d2d2;
+    background: var(--color-bg-white);
+    height: 44px;
+}
+
+.program-form__captcha-code {
+    font-family: 'Bradley Hand', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--color-text);
+    opacity: 0.4;
+    user-select: none;
+    padding: 0 15px;
+}
+
+.program-form__captcha-refresh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 100%;
+    border: none;
+    background: var(--color-text);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+    padding: 0;
+}
+
+.program-form__captcha-refresh::after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 21px;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22' fill='none'%3E%3Cpath d='M10.791 0.25C13.588 0.25 16.269 1.383 18.246 3.4C20.222 5.416 21.331 8.151 21.331 11c0 .09.07.154.146.154h1.537l-.317.404-1.815 2.314-.197.25-.197-.25-1.815-2.314-.318-.404h1.538c.037 0 .074-.015.102-.043a.155.155 0 00.044-.111c0-2.506-.975-4.908-2.711-6.679C16.594 2.551 14.241 1.558 10.791 1.558c-2.451 0-4.804.994-6.538 2.763C2.518 6.092 1.542 8.494 1.542 11s.976 4.908 2.711 6.679c1.735 1.77 4.087 2.763 6.538 2.763.361 0 .646.298.646.654 0 .356-.285.653-.646.653-2.797 0-5.479-1.133-7.456-3.15C1.359 16.584.25 13.85.25 11s1.109-5.584 3.085-7.6C5.312 1.383 7.994.25 10.791.25z' fill='%23000' stroke='%23000' stroke-width='.5'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22' fill='none'%3E%3Cpath d='M10.791 0.25C13.588 0.25 16.269 1.383 18.246 3.4C20.222 5.416 21.331 8.151 21.331 11c0 .09.07.154.146.154h1.537l-.317.404-1.815 2.314-.197.25-.197-.25-1.815-2.314-.318-.404h1.538c.037 0 .074-.015.102-.043a.155.155 0 00.044-.111c0-2.506-.975-4.908-2.711-6.679C16.594 2.551 14.241 1.558 10.791 1.558c-2.451 0-4.804.994-6.538 2.763C2.518 6.092 1.542 8.494 1.542 11s.976 4.908 2.711 6.679c1.735 1.77 4.087 2.763 6.538 2.763.361 0 .646.298.646.654 0 .356-.285.653-.646.653-2.797 0-5.479-1.133-7.456-3.15C1.359 16.584.25 13.85.25 11s1.109-5.584 3.085-7.6C5.312 1.383 7.994.25 10.791.25z' fill='%23000' stroke='%23000' stroke-width='.5'/%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.program-form__captcha-refresh:hover {
+    background: rgba(32, 32, 32, 0.85);
+}
+
+/* ---- Privacy (checkbox + text) ----
+   Figma: checkbox 15×15, cr=2, 1px #202020
+   Text: Open Sans 12px, lh=16.3 */
+.program-form__privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    margin: 5px 0 0;
+}
+
+.program-form__checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    min-width: 15px;
+    border: 1px solid var(--color-text);
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 2px;
+    transition: background 0.2s ease;
+}
+
+.program-form__checkbox:checked {
+    background: var(--color-text);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6l2 2 4-4' stroke='%23fff' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 11px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.program-form__privacy-text {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.program-form__privacy-text a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* ---- Submit button ----
+   Figma: 148×39, bg white@0.5, 1px #202020
+   padding: 9px 22px, Open Sans 16px */
+.program-form__submit {
+    margin-top: 5px;
+}
+
+.program-form__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--color-text);
+    border-radius: 0;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.program-form__btn:hover {
+    background: var(--color-text);
+    color: var(--color-white);
+}
+
+/* ============================================
+   RESPONSIVE — LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .program-form {
+        padding: 88px 0;
+    }
+
+    .program-form__title {
+        font-size: 58px;
+    }
+
+    .program-form__subtitle {
+        font-size: 20px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MEDIUM DESKTOP (до 1200px)
+   ============================================ */
+@media (max-width: 1200px) {
+    .program-form__title {
+        font-size: 44px;
+    }
+
+    .program-form__subtitle {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (до 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .program-form {
+        padding: 50px 0;
+    }
+
+    .program-form__visual {
+        max-height: 400px;
+        margin-bottom: 30px;
+    }
+
+    .program-form__title {
+        font-size: 36px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (до 768px)
+   Figma node: 1810:1943 (291×570)
+   Single column: title → form (image hidden)
+   ============================================ */
+@media (max-width: 768px) {
+    .program-form {
+        padding: 50px 0;
+    }
+
+    .program-form .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* ---- Image hidden on mobile (Figma 1810:1943) ---- */
+    .program-form__visual {
+        display: none;
+    }
+
+
+    /* ---- Title & subtitle ---- */
+    .program-form__title {
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        margin-bottom: 15px;
+    }
+
+    .program-form__subtitle {
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+        max-width: none;
+    }
+
+    /* ---- Form fields ---- */
+    .program-form__fields {
+        gap: 8px;
+    }
+
+    .program-form__input {
+        font-size: 12px;
+        height: 32px;
+        padding: 0 12px;
+    }
+
+    .program-form__input::placeholder {
+        opacity: 0.5;
+    }
+
+    .program-form__input--textarea {
+        height: 145px;
+        padding: 12px;
+    }
+
+    /* ---- Captcha (display first, input second) ---- */
+    .program-form__captcha-row {
+        flex-direction: column;
+    }
+
+    .program-form__captcha-display {
+        order: -1;
+        flex: none;
+        width: 100%;
+        height: 32px;
+        grid-template-columns: 1fr 26px;
+    }
+
+    .program-form__captcha-code {
+        font-size: 20px;
+        padding: 0 12px;
+    }
+
+    .program-form__captcha-refresh {
+        width: 26px;
+    }
+
+    .program-form__captcha-refresh::after {
+        width: 15px;
+        height: 14px;
+    }
+
+    .program-form__input--captcha {
+        order: 1;
+        flex: none;
+        width: 100%;
+        height: 32px;
+    }
+
+    /* ---- Privacy ---- */
+    .program-form__privacy {
+        margin-top: 7px;
+        gap: 8px;
+    }
+
+    .program-form__privacy-text {
+        font-size: 10px;
+        line-height: 1.36;
+    }
+
+    /* ---- Submit ---- */
+    .program-form__submit {
+        margin-top: 12px;
+    }
+
+    .program-form__btn {
+        font-size: 12px;
+        padding: 8px 20px;
+        gap: 3px;
+    }
+}

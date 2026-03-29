@@ -1,0 +1,20 @@
+/* ============================================
+   ПРОГРАММА ПРЕВЕНТИВНОЙ МЕДИЦИНЫ - MAIN STYLES
+   Page: «Здоровое сердце» (Figma 1467:239)
+   ============================================ */
+
+@import url('../base.css');
+@import url('../components.css');
+@import url('../header.css');
+@import url('../footer.css');
+@import url('section-hero.css');
+@import url('section-about.css');
+@import url('section-includes.css');
+@import url('section-doctors.css');
+@import url('section-steps.css');
+@import url('section-form.css');
+
+.program-page {
+    background: var(--color-bg-cream);
+    color: var(--color-text);
+}

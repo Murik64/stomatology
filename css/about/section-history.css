@@ -1,0 +1,348 @@
+/* ============================================
+   SECTION 7: ИСТОРИЯ КЛИНИКИ (Timeline/Carousel)
+   Figma Desktop: node-id=684-215
+   Figma Mobile: node-id=704-1408
+============================================= */
+
+/* Section */
+.about-history {
+    background-color: #F8F7F3;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* ---- HEADER ---- */
+.about-history__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-history__title {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    color: #202020;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.about-history__subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(32, 32, 32, 0.9);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ---- NAVIGATION ARROWS ---- */
+.about-history__nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.about-history__nav-btn {
+    width: 39px;
+    height: 39px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    color: var(--color-text);
+    padding: 0;
+}
+
+.about-history__nav-btn:hover {
+    background: var(--color-bg-button-hover);
+    color: var(--color-text);
+}
+
+.about-history__nav-btn svg {
+    width: 14px;
+    height: 12px;
+}
+
+/* ---- SCROLL CONTAINER ---- */
+.about-history__scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    padding-left: 24px;
+    padding-right: 24px;
+    scroll-behavior: smooth;
+}
+
+.about-history__scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.about-history__scroll:active {
+    cursor: grabbing;
+}
+
+/* ---- TIMELINE LINE SVG ---- */
+.about-history__line-svg {
+    display: block;
+    width: max(100%, 2620px);
+    min-width: 0;
+    height: 24px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+/* ---- CARDS ROW ---- */
+.about-history__cards {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+}
+
+/* ---- CARD BASE ---- */
+.about-history__card {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card: solid blue */
+.about-history__card--blue {
+    background: #1C2472;
+}
+
+/* Card: image with gradient fallback */
+.about-history__card--image {
+    background: linear-gradient(223deg, rgba(13, 173, 174, 1) 0%, rgba(16, 137, 138, 1) 100%);
+}
+
+.about-history__card--image-2 {
+    background: linear-gradient(223deg, rgba(28, 36, 114, 0.9) 0%, rgba(40, 50, 140, 0.8) 100%);
+}
+
+.about-history__card--image-3 {
+    background: linear-gradient(223deg, rgba(70, 100, 150, 1) 0%, rgba(50, 80, 130, 1) 100%);
+}
+
+/* Card overlay for image cards */
+.about-history__card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(28, 36, 114, 0.6) 22%, rgba(28, 36, 114, 0) 37%, rgba(28, 36, 114, 1) 85%);
+    z-index: 1;
+}
+
+/* Card background image (if present) */
+.about-history__card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- CARD INNER CONTENT ---- */
+.about-history__card-inner {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Year label */
+.about-history__card-year {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+/* White dot (top-right) */
+.about-history__card-dot {
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+/* Card text */
+.about-history__card-text {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* ---- CARD WITH LOGO ---- */
+.about-history__card--with-logo .about-history__card-dot {
+    display: none;
+}
+
+.about-history__card--with-logo .about-history__card-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 77px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-history__card--with-logo .about-history__card-logo img {
+    max-width: 64px;
+    max-height: 19px;
+}
+
+.about-history__card--with-logo .about-history__card-text {
+    letter-spacing: -0.03em;
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+============================================= */
+@media (min-width: 1920px) {
+    .about-history {
+        padding: 100px 0;
+    }
+
+    .about-history__title {
+        font-size: 62px;
+    }
+
+    .about-history__subtitle {
+        font-size: 20px;
+        max-width: 700px;
+    }
+
+    .about-history__card {
+        flex: 0 0 300px;
+        width: 300px;
+        height: 270px;
+    }
+
+    .about-history__card-year {
+        font-size: 28px;
+    }
+
+    .about-history__card-text {
+        font-size: 14px;
+    }
+
+    .about-history__card-inner {
+        padding: 24px;
+    }
+
+    .about-history__nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .about-history__line-svg {
+        width: max(100%, 3100px);
+    }
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+============================================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .about-history {
+        padding: 60px 0;
+    }
+
+    .about-history__title {
+        font-size: 36px;
+    }
+
+    .about-history__subtitle {
+        font-size: 15px;
+    }
+
+    .about-history__nav {
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .about-history {
+        padding: 50px 0;
+    }
+
+    .about-history__header {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .about-history__title {
+        font-size: 28px;
+        line-height: 0.9;
+        margin-bottom: 15px;
+    }
+
+    .about-history__subtitle {
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 0;
+        max-width: none;
+    }
+
+    .about-history__nav {
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .about-history__nav-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .about-history__nav-btn svg {
+        width: 12px;
+        height: 10px;
+    }
+
+    .about-history__scroll {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Small mobile — match container-fluid padding from base.css */
+@media (max-width: 374px) {
+    .about-history__scroll {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

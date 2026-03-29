@@ -1,0 +1,118 @@
+/* ============================================
+   ABOUT - PARTNERS (Section 8)
+   Figma Desktop: node-id=684-116
+   Figma Mobile: node-id=704-1315
+   ============================================ */
+
+.about-partners {
+    background: #FFFFFF;
+    padding: 70px 0 90px;
+}
+
+/* Заголовок */
+.about-partners__title {
+    font-family: 'Forum', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #202020;
+}
+
+/* Сетка партнёров — 2 колонки, строки выравнены */
+.about-partners__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+
+}
+
+/* Карточка партнёра */
+.about-partners__item {
+    background: #FDFCFA;
+    border: 1px solid #D2D2D2;
+    padding: 18px 20px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #202020;
+}
+
+/* ============================================
+   RESPONSIVE - LARGE DESKTOP (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .about-partners {
+        padding: 90px 0 110px;
+    }
+
+    .about-partners__title {
+        font-size: 62px;
+    }
+
+    .about-partners__grid {
+        gap: 6px 24px;
+    }
+
+    .about-partners__item {
+        font-size: 20px;
+        padding: 22px 24px;
+        min-height: 64px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .about-partners__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+    .about-partners__title {
+        font-size: 42px;
+    }
+
+    .about-partners__item {
+        font-size: 16px;
+        padding: 16px 18px;
+        min-height: 50px;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 575px) {
+    .about-partners {
+        padding: 50px 0 70px;
+    }
+
+    .about-partners__title {
+        font-size: 28px;
+        line-height: 0.9;
+        text-align: left !important;
+    }
+
+    .about-partners__grid {
+        gap: 4px 4px;
+    }
+
+    .about-partners__item {
+        font-size: 9px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        padding: 10px 6px;
+        min-height: 31px;
+        text-align: center;
+        justify-content: center;
+        color: #000000;
+    }
+}
