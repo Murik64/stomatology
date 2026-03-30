@@ -5,7 +5,7 @@
    ============================================ */
 
 .stomatology-equipment {
-  padding-top: 0;
+  padding-top: 60px;
   padding-bottom: 60px;
   background: var(--color-bg-white);
 }
@@ -22,7 +22,7 @@
   margin: 0 0 25px;
 }
 .stomatology-equipment-fluid{
-  margin-top: 40px;
+  margin-top: 0px;
 }
 .stomatology-equipment__text {
   font-family: var(--font-body);
@@ -33,7 +33,8 @@
   color: var(--color-text);
   opacity: 0.9;
   max-width: 858px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  margin-top: -40px;
 }
 
 .stomatology-equipment__text p {
@@ -145,11 +146,13 @@
   .stomatology-equipment__title {
     font-size: 36px;
     margin-bottom: 20px;
+
   }
 
   .stomatology-equipment__text {
     font-size: 15px;
     margin-bottom: 30px;
+    margin-top: 0;
   }
 
   .stomatology-equipment__btn {
@@ -161,7 +164,7 @@
 
 @media (max-width: 768px) {
   .stomatology-equipment {
-    padding: 10px 0 30px;
+    padding: 50px 0 30px;
   }
   .stomatology-breadcrumbs-feature{
     display: none;

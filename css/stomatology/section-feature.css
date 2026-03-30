@@ -159,7 +159,7 @@
 
 @media (max-width: 768px) {
     .stomatology-feature {
-        padding: 50px 0 30px;
+        padding: 0px 0 30px;
     }
     .stomatology-breadcrumbs-feature{
         display: none;

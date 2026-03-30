@@ -20,7 +20,7 @@
   border-radius: 0 !important;
   background-color: transparent !important;
 
-  padding: 20px 0; /* Отступы от линий до текста */
+  padding: 10px 0; /* Отступы от линий до текста */
 }
 
 .accordion-header {
@@ -89,7 +89,7 @@
 
 @media (max-width: 374px) {
   .accordion-item {
-    padding: 12px 0; /* Для совсем узких экранов (старые iPhone) ужимаем отступы еще сильнее */
+    padding: 4px 0; /* Для совсем узких экранов (старые iPhone) ужимаем отступы еще сильнее */
   }
 
   .accordion-title {
