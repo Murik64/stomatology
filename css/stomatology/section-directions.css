@@ -3,7 +3,7 @@
    ============================================ */
 
 .directions-section {
-    padding: 0 0 40px 0;
+    padding: 40px 0 70px 0;
     background: var(--color-bg-light);
 }
 
@@ -23,7 +23,9 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
 }
-
+.directions-title br{
+    display: none;
+}
 .directions-subtitle {
     font-family: var(--font-body);
     font-size: 16px;
@@ -211,7 +213,7 @@
    ============================================ */
 @media (max-width: 768px) {
     .directions-section {
-        padding: 10px 0 60px;
+        padding: 50px 0;
     }
 
     .directions-header {
@@ -285,7 +287,7 @@
 
     .directions-action {
         justify-content: flex-start;
-        margin-top: 30px;
+        margin-top: 17px;
     }
 
     .directions-action .btn {
@@ -316,7 +318,9 @@
     .directions-title {
         font-size: 24px;
     }
-
+    .directions-title br{
+        display: block;
+    }
     .direction-item {
         padding: 12px 14px;
     }

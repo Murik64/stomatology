@@ -1,6 +1,8 @@
 .accordion{
-  padding-top: 0px;
+  padding-top: 10px ;
   padding-bottom: 40px;
+  padding-left: var(--content-padding-inline) !important;
+  padding-right: var(--content-padding-inline) !important;
 }
 .accordions-container {
   display: flex;
@@ -50,8 +52,9 @@
 
 @media (max-width: 992px) {
   .accordions-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
     gap: 12px; /* Уменьшаем расстояние между колонками */
-    padding: 0 16px; /* Задаем безопасные отступы по бокам, чтобы контент не прилипал к краям экрана */
   }
 
   .accordion-title {
@@ -85,6 +88,12 @@
     font-weight: 300;
     line-height: 1;
   }
+  .accordion{
+    padding-top: 0px ;
+    padding-bottom: 0px;
+    padding-left: var(--content-padding-inline) !important;
+    padding-right: var(--content-padding-inline) !important;
+  }
 }
 
 @media (max-width: 374px) {
@@ -94,8 +103,5 @@
 
   .accordion-title {
     font-size: 14px;
-  }
-  .accordion{
-    padding-bottom: 30px;
   }
 }

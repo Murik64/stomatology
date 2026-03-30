@@ -6,7 +6,7 @@
 
  .stomatology-benefits {
     background: var(--color-bg-white);
-    padding: 20px 0 70px 0;
+    padding: 70px 0;
 }
 
 .stomatology-benefits__title {
@@ -25,7 +25,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
+.stomatology-benefits__card-title br{
+    display: none;
+}
+.stomatology-benefits__title br{
+    display: none;
+}
 .stomatology-benefits__card {
     background: #443e9e;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -71,7 +76,12 @@
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
-
+    .stomatology-benefits__card-title br{
+        display: block;
+    }
+    .stomatology-benefits__title br{
+        display: block;
+    }
     .stomatology-benefits__title {
         font-size: 28px;
         line-height: 0.9;
@@ -146,6 +156,7 @@
         letter-spacing: -0.02em;
     }
     .stomatology-benefits{
-        padding-top: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }

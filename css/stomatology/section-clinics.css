@@ -5,12 +5,16 @@
 /* ============================================
    DESKTOP
    ============================================ */
+.container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+}
 .clinics-section {
     padding: 70px 0 40px 0;
     background: var(--color-white);
 }
 
-.clinics-section .section-header {
+.clinics-section .clinics-header {
     margin-bottom: 40px;
 }
 .container-fluid{
@@ -135,10 +139,11 @@
     display: block;
 }
 
-.ophthalmology-clinics .section-subtitle {
+.ophthalmology-clinics .clinics-subtitle {
     opacity: 0.9;
 }
-
+.clinics-title{}
+.clinics-subtitle {}
 /* ============================================
    RESPONSIVE - LARGE DESKTOP (1920px+)
    ============================================ */
@@ -181,7 +186,7 @@
     }
 
     .map-container {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .clinics-grid {
@@ -202,7 +207,7 @@
     }
 
     .map-container {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .clinics-grid {
@@ -221,7 +226,7 @@
 
 @media (max-width: 576px) {
     .clinics-section{
-        padding: 20px 0;
+        padding: 50px 0 0 0;
     }
     .clinic-card {
         padding: 16px;
@@ -253,5 +258,24 @@
     }
     .clinic-address br{
         display: none;
+    }
+    .clinics-title{
+        font-family: "Forum", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: #202020;
+    }
+    .clinics-subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: rgba(32, 32, 32, 0.9);
+    }
+    .clinics-section .clinics-header{
+        margin-bottom: 20px;
     }
 }

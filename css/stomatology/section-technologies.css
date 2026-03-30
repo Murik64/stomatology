@@ -5,18 +5,27 @@
    ============================================ */
 
 .stomatology-interiors {
-    padding: 30px 0 40px;
+    padding: 70px 0 40px;
     background: #f8f7f3;
 }
 
-.stomatology-interiors .section-header {
+.stomatology-interiors .stomatology-interiors-header {
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.stomatology-interiors .section-subtitle {
-    opacity: 0.9;
-}
 
+.stomatology-interiors-title{
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #202020
+}
+.stomatology-interiors-title br{
+    display: none;
+}
 /* Slider wrapper */
 .stomatology-interiors__slider {
     position: relative;
@@ -166,22 +175,24 @@
    ============================================ */
 @media (max-width: 768px) {
     .stomatology-interiors {
-        padding: 10px 0 30px;
+        padding: 50px 0 ;
     }
 
-    .stomatology-interiors .section-header {
-        text-align: left;
+    .stomatology-interiors .stomatology-interiors-header {
+        text-align: center;
         margin-bottom: 20px;
     }
 
-    .stomatology-interiors .section-title {
+    .stomatology-interiors {
         font-size: 28px;
         line-height: 0.9;
     }
-
-    .stomatology-interiors .section-subtitle {
+    .stomatology-interiors-title br{
+        display: block;
+    }
+    .stomatology-interiors {
         font-size: 14px;
-        text-align: left;
+        text-align: center;
     }
 
     .stomatology-interiors__slide {
@@ -213,5 +224,26 @@
 
     .stomatology-interiors__dots {
         bottom: 10px;
+    }
+    .stomatology-interiors-title{
+        font-family: "Forum", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 90%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #202020;
+    }
+    .stomatology-interiors-subtitle{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: rgba(32, 32, 32, 0.9);
+    }
+    .stomatology-interiors-subtitle br{
+        display: none;
     }
 }

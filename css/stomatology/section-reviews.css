@@ -9,7 +9,7 @@
 }
 
 .reviews-section{
-    padding: 30px 0 80px;
+    padding: 70px 0 70px 0 !important;
     background: #FFFFFF !important;
 }
 
@@ -25,6 +25,28 @@
 }
 
 
+.reviews-header{
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+.reviews-title{
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #202020;
+}
+.reviews-subtitle{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(32, 32, 32, 0.9);
+}
 .review-more {
     display: inline-flex;
     align-items: center;
@@ -54,7 +76,9 @@
 .stomatology-reviews .slider-arrows {
     gap: 25px;
 }
-
+.slider-arrows{
+    margin-bottom: 35px;
+}
 .stomatology-reviews .slider-arrows .arrow-btn {
     display: flex;
     align-items: center;
@@ -105,7 +129,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 3rem;
+    margin-top: 30px;
     margin-left: 3rem;
 }
 
@@ -121,6 +145,9 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+    }
+    .reviews-section{
+        padding: 50px 0 !important;
     }
 
     .review-more {
@@ -144,8 +171,30 @@
         margin-left: 0;
     }
     .reviews-section{
-        padding-top: 10px;
+        padding: 50px 0;
     }
+    .reviews-title{
+        font-family: "Forum", sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: #202020;
+        text-align: left;
+    }
+    .reviews-subtitle{
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: rgba(32, 32, 32, 0.9);
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .reviews-subtitle br{
+        display: none;
+     }
 }
 @media (max-width: 374px) {
     .section-actions{

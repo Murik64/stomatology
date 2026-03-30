@@ -6,7 +6,7 @@
 
 .stomatology-feature {
     padding-top: 0;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     background: #f8f7f3;
 }
 
@@ -18,9 +18,11 @@
     line-height: 0.9;
     letter-spacing: -0.02em;
     color: var(--color-text);
-    margin: 0 0 25px;
+    margin: 0 0 45px;
 }
-
+.container-fluid{
+    padding: 0 !important;
+}
 .stomatology-feature__text {
     font-family: var(--font-body);
     font-size: 18px;
@@ -116,8 +118,8 @@
 }
 
 .stomatology-feature__visual img {
-    object-fit: cover;
-    aspect-ratio: 440 / 404;
+    width: 440px;
+    height: 404px;
 }
 
 @media (max-width: 1200px) {
@@ -159,7 +161,7 @@
 
 @media (max-width: 768px) {
     .stomatology-feature {
-        padding: 0px 0 30px;
+        padding: 50px 0 50px;
     }
     .stomatology-breadcrumbs-feature{
         display: none;
@@ -173,7 +175,6 @@
     .stomatology-feature__text {
         font-size: 14px;
         line-height: 1.3;
-        margin-bottom: 20px;
     }
     .ophthalmology-breadcrumbs{
         display: none;
@@ -181,7 +182,7 @@
     .stomatology-feature__actions {
         flex-direction: column !important;
         gap: 10px !important;
-        margin-top: 20px !important;
+        margin-top: 0px !important;
     }
 
     .stomatology-feature__btn {

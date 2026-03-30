@@ -164,7 +164,7 @@
 
 @media (max-width: 768px) {
   .stomatology-equipment {
-    padding: 50px 0 30px;
+    padding: 50px 0;
   }
   .stomatology-breadcrumbs-feature{
     display: none;

@@ -7,7 +7,7 @@
 
 .program-doctors {
     background: var(--color-bg-white);
-    padding: 0 0 50px 0;
+    padding: 70px 0;
 }
 
 /* ---- Header (centered) ----
@@ -153,7 +153,7 @@
    ============================================ */
 @media (max-width: 768px) {
     .program-doctors {
-        padding: 0 0 50px 0;
+        padding: 50px 0;
     }
 
     .program-doctors__header {
@@ -202,5 +202,6 @@
         font-size: 12px;
         line-height: 130%;
         color: #202020;
+        margin-top: 5px;
     }
 }
