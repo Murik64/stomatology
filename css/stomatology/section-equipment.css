@@ -19,7 +19,7 @@
   line-height: 0.9;
   letter-spacing: -0.02em;
   color: var(--color-text);
-  margin: 0 0 25px;
+  margin: 0 0 25px 0;
 }
 .stomatology-equipment-fluid{
   margin-top: 0px;
@@ -33,8 +33,7 @@
   color: var(--color-text);
   opacity: 0.9;
   max-width: 858px;
-  margin-bottom: 80px;
-  margin-top: -40px;
+  margin-bottom: 120px;
 }
 
 .stomatology-equipment__text p {
@@ -103,6 +102,8 @@
 .ostomatology-equipment__visual {
   overflow: hidden;
   position: relative;
+    width: 580px;
+    height: 480px;
 }
 
 .ostomatology-equipment__visual::before {
@@ -203,5 +204,12 @@
 
   .ostomatology-equipment__visual img {
     aspect-ratio: 1 / 1;
+  }
+  .ostomatology-equipment__visual{
+            overflow: hidden;
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 0 !important;
   }
 }
