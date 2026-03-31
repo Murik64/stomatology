@@ -111,6 +111,7 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: #202020;
+        margin-bottom: 20px;
 }
 .offers-subtitle{
     font-family: "Open Sans", sans-serif;
@@ -120,6 +121,7 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: rgba(32, 32, 32, 0.9);
+    margin-bottom: 30px;
 }
 /* ============================================
    RESPONSIVE - 1440px
