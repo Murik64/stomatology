@@ -10,7 +10,6 @@
     background: #f8f7f3;
 }
 
-
 .stomatology-feature__title {
     font-family: var(--font-heading);
     font-size: 52px;
@@ -20,9 +19,11 @@
     color: var(--color-text);
     margin: 0 0 45px;
 }
-.container-fluid{
+
+.container-fluid {
     padding: 0 !important;
 }
+
 .stomatology-feature__text {
     font-family: var(--font-body);
     font-size: 18px;
@@ -47,7 +48,8 @@
     gap: 15px !important;
     margin-top: 86px !important;
 }
-.stomatology-breadcrumbs-feature{
+
+.stomatology-breadcrumbs-feature {
     display: block;
     font-family: var(--font-body);
     font-weight: 400;
@@ -57,7 +59,8 @@
     margin-bottom: 80px;
     margin-top: 40px;
 }
-.stomatology-breadcrumbs-feature__current{
+
+.stomatology-breadcrumbs-feature__current {
     color: #000;
 }
 
@@ -75,7 +78,9 @@
     background: rgba(32, 32, 32, 0.05);
     border: 1px solid var(--color-text);
     text-decoration: none;
-    transition: background 0.25s ease, color 0.25s ease;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
 }
 
 .stomatology-feature__btn:hover {
@@ -102,10 +107,12 @@
 .stomatology-feature__visual {
     overflow: hidden;
     position: relative;
+    width: 540px;
+    height: 480px;
 }
 
 .stomatology-feature__visual::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -114,7 +121,9 @@
     top: -100px;
     left: 0;
     opacity: 1;
-    background: linear-gradient(179.72deg, rgba(46, 87, 203, 0) 30.94%, #2E57CB 96.32%);
+    background: linear-gradient(179.72deg,
+            rgba(46, 87, 203, 0) 30.94%,
+            #2e57cb 96.32%);
 }
 
 .stomatology-feature__visual img {
@@ -123,6 +132,13 @@
 }
 
 @media (max-width: 1200px) {
+    .stomatology-feature__visual {
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
     .stomatology-feature {
         padding: 60px 0;
     }
@@ -138,6 +154,13 @@
 }
 
 @media (max-width: 992px) {
+    .stomatology-feature__visual {
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
     .stomatology-feature {
         padding: 50px 0;
     }
@@ -160,12 +183,21 @@
 }
 
 @media (max-width: 768px) {
+    .stomatology-feature__visual {
+        overflow: hidden;
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
     .stomatology-feature {
         padding: 50px 0 50px;
     }
-    .stomatology-breadcrumbs-feature{
+
+    .stomatology-breadcrumbs-feature {
         display: none;
     }
+
     .stomatology-feature__title {
         font-size: 28px;
         line-height: 0.9;
@@ -176,9 +208,11 @@
         font-size: 14px;
         line-height: 1.3;
     }
-    .ophthalmology-breadcrumbs{
+
+    .ophthalmology-breadcrumbs {
         display: none;
     }
+
     .stomatology-feature__actions {
         flex-direction: column !important;
         gap: 10px !important;
@@ -194,14 +228,17 @@
     }
 
     .stomatology-feature__visual::before {
-        background: linear-gradient(179.72deg, rgba(46, 87, 203, 0) 30.94%, #2E57CB 96.32%);
+        background: linear-gradient(179.72deg,
+                rgba(46, 87, 203, 0) 30.94%,
+                #2e57cb 96.32%);
         top: -250px;
     }
 
     .stomatology-feature__visual img {
         aspect-ratio: 1 / 1;
     }
-    .stomatology-feature__main{
+
+    .stomatology-feature__main {
         margin-top: 0 !important;
     }
 }
